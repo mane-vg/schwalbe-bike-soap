@@ -1,0 +1,167 @@
+/**
+ * Breakpoint Configuration
+ * @see https://github.com/Team-Sass/breakpoint/wiki
+ *
+ */
+
+/////////////////////
+// Global Breakpoints
+
+// Avoid using in favor of atomic, content-specific, breakpoints.
+// These should be used for generic code, like layouts and typography, only.
+
+$xs: 320px;
+$small: 480px;
+$medium: 720px;
+$large: 920px;
+$xl: 1224px;
+// The max-width breakpoint is used when the design should be applied at whatever the
+// largest breakpoint is regardless of actual pixel value. e.g. removing outer margin on body wrapper
+$max-width: $xl;
+
+/// Mixin - xs Breakpoint
+/// Allows easier @include xs {} syntax
+@mixin xs {
+  @include breakpoint($xs) {
+    @content;
+  }
+}
+
+/// Mixin - small Breakpoint
+/// Allows easier @include small {} syntax
+@mixin small {
+  @include breakpoint($small) {
+    @content;
+  }
+}
+
+/// Mixin - medium Breakpoint
+/// Allows easier @include medium {} syntax
+@mixin medium {
+  @include breakpoint($medium) {
+    @content;
+  }
+}
+
+/// Mixin - large Breakpoint
+/// Allows easier @include large {} syntax
+@mixin large {
+  @include breakpoint($large) {
+    @content;
+  }
+}
+
+/// Mixin - xl Breakpoint
+/// Allows easier @include xl {} syntax
+@mixin xl {
+  @include breakpoint($xl) {
+    @content;
+  }
+}
+
+/// Mixin - max-width Breakpoint
+/// Allows easier @include max-width {} syntax
+@mixin max-width {
+  @include breakpoint($max-width) {
+    @content;
+  }
+}
+
+//Lang:
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-gutter-width: 32px;
+$grid-columns: 12;
+
+// Small Mobile XS
+$grid-breakpoints-xs: 0;
+$grid-margin-xs: 20px;
+$grid-gutter-width-xs: 12px;
+$grid-columns-xs: 4;
+$content-area-xs: auto;
+
+// Mobile SM
+$grid-breakpoints-sm: 576px;
+$grid-margin-sm:  20px;
+$grid-gutter-width-sm: 12px;
+$grid-columns-sm: 4;
+$content-area-sm: 540px;
+
+// Tablet MD
+$grid-breakpoints-md: 600px;
+$grid-margin-md:  24px;
+$grid-gutter-width-md: 16px;
+$grid-columns-md: 8;
+$content-area-md: 720px;
+
+// Small Desktop LG
+$grid-breakpoints-lg: 900px;
+$grid-margin-lg:  40px;
+$grid-columns-lg: 8;
+$grid-gutter-width-lg: 16px;
+$content-area-lg: 960px;
+
+// Medium Desktop XL
+$grid-breakpoints-xl: 1200px;
+$grid-margin-xl: 80px;
+$grid-columns-xl: 12;
+$grid-gutter-width-xl: 24px;
+$content-area-xl: 1140px;
+
+// Large Desktop XXL
+$grid-breakpoints-xxl: 1800px;
+$grid-columns-xxl: 12;
+$grid-margin-xxl: 160px;
+$grid-gutter-width-xxl: 32px;
+$content-area-xxl: 1200px;
+
+$max-content-width-big-row: 1600px; // 12 spaltig
+$max-content-width-row: 1400px; // 10 spaltig
+$max-content-width-small: 1050px; // 8 spaltig
+
+$grid-breakpoints: (
+        xs: $grid-breakpoints-xs,
+        sm: $grid-breakpoints-sm,
+        md: $grid-breakpoints-md,
+        lg: $grid-breakpoints-lg,
+        xl: $grid-breakpoints-xl,
+        xxl: $grid-breakpoints-xxl,
+        xxxl: 3000px,
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        xs: $content-area-xs,
+        sm: $content-area-sm,
+        md: $content-area-md,
+        lg: $content-area-lg,
+        xl: 1140px,
+        xxl: 1330px,
+        xxxl: 1330px,
+);
+
+//$content-max-width-xl: 1140px;
+//$content-max-width-xxl: 1140px;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+// Content Area
+//$container-max-widths: (
+//  sm: 540px,
+//  md: 720px,
+//  lg: 960px,
+//  xl: 1140px,
+//  xxl: 1140px
+//) !default;
+
+//@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+$grid-gap-col-1: 160px;

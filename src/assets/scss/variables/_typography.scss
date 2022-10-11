@@ -1,0 +1,107 @@
+$font-family-sans-serif: 'Titillium Web', serif;
+$headings-font-family: 'PrisonProAOE150', sans-serif;
+$font-family-base: $font-family-sans-serif;
+$font-family-mono: 'Arial';
+$font-family-highlight: 'TT Bluescreens';
+
+// Fonts
+$font-body: $font-family-sans-serif;
+
+// stylelint-enable value-keyword-case
+
+$font-size-base: 1.25rem; // 20px
+$font-size-lg: $font-size-base*1.33; //32px
+$font-size-md: 0.75em; //18px
+$font-size-sm: 0.8rem;
+$font-size-nav: 1rem;
+
+$font-size-link: 22px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-black: 700;
+
+
+$lead-font-size:$font-size-lg;
+$lead-font-weight:$font-weight-normal;
+$lead-line-height: 1.4;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+$headings-line-height: 1.03;
+
+$paragraph-margin-bottom: 1rem !default;
+$dt-font-weight: $font-weight-bold !default;
+
+
+$font-heading: $headings-font-family;
+$headings-font-weight: 400;
+
+h1, .h1 {
+  text-transform: uppercase;
+  text-align: start;
+}
+
+h2, .h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: $section-margin * 0.7;
+}
+
+h3, .h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+.highlighted {
+  font-family: $font-family-highlight;
+}
+
+.lead {
+  font-size: $font-size-base * 1.2;
+  font-weight: 600;
+}
+
+.small {
+  font-size: $font-size-base * 0.9;
+}
+
+.center-text {
+  text-align: center;
+}
+
+a {
+  &.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 35px;
+    font-weight: 700;
+    &.btn-primary {
+      color: white;
+      background: $primary;
+      transition: color 0.5s;
+      &:hover {
+        background: $green;
+        transition: color 0.5s;
+      }
+    }
+    &.btn-primary-outline {
+      color: $primary;
+      background: transparent;
+      border: 2px solid $primary;
+      &:hover {
+        color: white;
+        background: $primary;
+      }
+    }
+  }
+}

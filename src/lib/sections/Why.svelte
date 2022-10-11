@@ -1,0 +1,202 @@
+<script>
+    import Carousel from 'svelte-carousel';
+
+    export let maxOffset = 0;
+
+    function initParallax(element, multiplier) {
+        let oldPosition;
+        let initialOffset = parseInt(getComputedStyle(element).getPropertyValue('--translate-x'));
+
+        let options = {};
+        let callback = (entries, observer) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting) {
+                    window.addEventListener('scroll', iconScrollHandler);
+                    oldPosition = element.getBoundingClientRect().y;
+                }
+                if(!entry.isIntersecting) {
+                    window.removeEventListener('scroll', iconScrollHandler);
+                }
+            });
+        };
+        let startersetObserver = new IntersectionObserver(callback, options);
+        startersetObserver.observe(element);
+
+        function iconScrollHandler() {
+            let position = element.getBoundingClientRect().y;
+            let offset = parseInt(getComputedStyle(element).getPropertyValue('--translate-x'));
+            if(position < oldPosition) {
+                let xValue = Math.min(maxOffset, (offset - (position - oldPosition)/multiplier));
+                element.style.setProperty('--translate-x', xValue + 'px');
+            } else {
+                let xValue = Math.max(initialOffset, (offset - (position - oldPosition)/multiplier));
+                element.style.setProperty('--translate-x', xValue + 'px');
+            }
+            oldPosition = position;
+        }
+    }
+</script>
+
+<section class="why">
+    <div class="row">
+        <div class="container">
+            <div class="span-12">
+                <h2>Wieso hat Schwalbe eine Bike Seife produziert?</h2>
+            </div>
+            <div class="col-left">
+                <div class="image-wrapper">
+                    <picture use:initParallax={1.5}>
+                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter.avif" type="image/avif">
+                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter.webp" type="image/webp">
+                        <img src="src/assets/images/why/Unbound-Schwalbe-Peter.jpg">
+                    </picture>
+                    <picture use:initParallax={1}>
+                        <source srcset="src/assets/images/why/streifen.avif" type="image/avif">
+                        <source srcset="src/assets/images/why/streifen.webp" type="image/webp">
+                        <img src="src/assets/images/why/streifen.png">
+                    </picture>
+                    <picture use:initParallax={1.75}>
+                        <source srcset="src/assets/images/why/bike-soap-5.avif" type="image/avif">
+                        <source srcset="src/assets/images/why/bike-soap-5.webp" type="image/webp">
+                        <img src="src/assets/images/why/bike-soap-5.jpg">
+                    </picture>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="quote-slider">
+                    <img class="quote-open" src="src/assets/images/why/icon-quote-open.svg">
+                    <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={3000}
+                              pauseOnFocus={true} dots={true} let:currentPageIndex let:pagesCount let:showPage>
+                        <div class="slide">
+                            <figure class="quote">
+                                <blockquote>
+                                    <p>Die Idee entstand aus unserem eigenen, praktischen Bedarf,
+                                        häufig viele Bikes zu waschen und dabei weniger Reinigungsmaterial einzusetzen,
+                                        das wesentlich länger hält.</p>
+                                </blockquote>
+                                <figcaption>Peter Krischio<br/>Product Manager</figcaption>
+                            </figure>
+                        </div>
+                        <div class="slide">
+                            <figure class="quote">
+                                <blockquote>
+                                    <p>Ganz einfach: Sie hält sehr lange und lässt sich sehr umweltfreundlich entwickeln.</p>
+                                </blockquote>
+                                <figcaption>Peter Krischio<br/>Product Manager</figcaption>
+                            </figure>
+                        </div>
+                        <div class="slide">
+                            <figure class="quote">
+                                <blockquote>
+                                    <p>Eine Seife reicht für bis zu 100 Wäschen – wenn man das auf den Preis von 7,90 Euro mal herunterrechnet,
+                                       ist eine einzelne Wäsche enorm günstig.</p>
+                                </blockquote>
+                                <figcaption>Peter Krischio<br/>Product Manager</figcaption>
+                            </figure>
+                        </div>
+                        <div slot="dots" class="carousel-dots">
+                            {#each Array(pagesCount) as _, pageIndex(pageIndex)}
+                                <div class="carousel-dot" active={currentPageIndex === pageIndex} on:click={showPage(pageIndex)}></div>
+                            {/each}
+                        </div>
+                    </Carousel>
+                    <img class="quote-close" src="src/assets/images/why/icon-quote-close.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+  @import "src/assets/scss/_import.scss";
+
+    section.why {
+      .span-12 {
+        z-index: 4;
+        h2 {
+          margin-bottom: $section-margin * 0.7;
+        }
+      }
+
+      .col-left {
+        grid-column: 1/6;
+      }
+      .col-right {
+        grid-column: 7/13;
+      }
+      .image-wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        picture {
+          position: absolute;
+
+          max-width: 55%;
+
+          --translate-x: -200px;
+          transform: translateY(var(--translate-x));
+          transition: transform 0.1s;
+
+          &:nth-child(1) {
+            top: 0;
+            left: 10%;
+            z-index: 3;
+          }
+          &:nth-child(2) {
+            top: 25%;
+            left: 0;
+
+            mix-blend-mode: multiply;
+
+            z-index: 2;
+          }
+          &:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+          }
+        }
+      }
+
+      .quote-slider {
+        position: relative;
+        .quote-open {
+          transform: translateX(-100%);
+        }
+        .quote-close {
+          float: right;
+          transform: translateX(-100%);
+        }
+
+        .slide {
+          //padding: 0 $grid-gutter-width;
+          figure.quote {
+            margin: 0 10px;
+            blockquote {
+              margin: 0;
+              p {
+                font-family: "Rock Salt";
+                font-size: $font-size-base * 1.6;
+              }
+            }
+          }
+        }
+      }
+
+      .carousel-dots {
+        display: flex;
+        .carousel-dot {
+          display: inline-block;
+          background: transparent;
+          border: 2px solid $primary;
+          border-radius: 100%;
+          height: 11px;
+          width: 11px;
+          margin: 0 10px;
+          &[active="true"] {
+            background: $primary;
+          }
+        }
+      }
+    }
+</style>
