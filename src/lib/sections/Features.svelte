@@ -353,7 +353,7 @@
                       padding: 0 22%;
                     }
                     h3 {
-                      font-size: calc($h1-large-size / 3.5);
+                      font-size: calc($h1-large-size / 3.75);
                       line-height: 1;
                       margin: 0;
 
@@ -366,6 +366,10 @@
                     }
                     p {
                       text-align: center;
+
+                      @include media-breakpoint-down(md) {
+                        font-size: $font-size-base * 0.8;
+                      }
                     }
                   }
                 }

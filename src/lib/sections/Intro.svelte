@@ -10,7 +10,7 @@
                 if(entry.isIntersecting) {
                     fadeIn = true;
                 } else {
-                    fadeIn = false;
+                    // fadeIn = false;
                 }
             });
         };

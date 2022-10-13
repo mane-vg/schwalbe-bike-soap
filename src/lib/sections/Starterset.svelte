@@ -18,14 +18,19 @@
         let startersetObserver = new IntersectionObserver(callback, options);
         startersetObserver.observe(item);
 
+        let startingOffset = parseInt(getComputedStyle(item).getPropertyValue('--translate-x'));
+        let maxOffset = parseInt(getComputedStyle(item).getPropertyValue('--translate-x-max'));
+
         function iconScrollHandler() {
             let position = item.getBoundingClientRect().y;
             let offset = parseInt(getComputedStyle(item).getPropertyValue('--translate-x'));
-            // if(position < oldPosition) {
-            //     item.style.setProperty('--translate-x', (offset - (position - oldPosition)/3) + 'px');
-            // } else {
-                item.style.setProperty('--translate-x', (offset - (position - oldPosition)/3) + 'px');
-            // }
+            if(position < oldPosition) {
+                let xValue = Math.min(maxOffset, (offset - (position - oldPosition)/3));
+                item.style.setProperty('--translate-x', xValue + 'px');
+            } else {
+                let xValue = Math.max(startingOffset, (offset - (position - oldPosition)/3));
+                item.style.setProperty('--translate-x', xValue + 'px');
+            }
             oldPosition = position;
         }
     }
@@ -98,7 +103,8 @@
             left: 0;
             top: 30%;
             max-width: 70px;
-            --translate-x: 0px;
+            --translate-x: -125px;
+            --translate-x-max: 0;
             transform: translate(-25%, var(--translate-x));
             transition: transform 0.1s;
 
@@ -108,6 +114,8 @@
             }
             @include media-breakpoint-up(lg) {
               max-width: unset;
+              --translate-x: -255px;
+              --translate-x-max: 335px;
               transform: translate(-50%, var(--translate-x));
             }
           }
@@ -123,7 +131,7 @@
             }
 
             h2 {
-              font-size: calc($h1-large-size / 3.5);
+              font-size: calc($h1-large-size / 3.75);
               color: white;
 
               @include media-breakpoint-up(md) {
