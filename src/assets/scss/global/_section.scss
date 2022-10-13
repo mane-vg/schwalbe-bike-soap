@@ -1,5 +1,11 @@
 section:not(.hero) {
-  margin-top: $section-margin;
+  margin-top: $section-margin * 0.5;
+  @include media-breakpoint-up(lg) {
+    margin-top: $section-margin * 0.75;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: $section-margin;
+  }
 }
 
 hr {

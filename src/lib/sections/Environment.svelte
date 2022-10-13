@@ -25,11 +25,20 @@
     .environment {
       .image-wrapper {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
+
         img.svg {
-          max-height: 150px;
+          max-height: 75px;
+
+          @include media-breakpoint-up(md) {
+            max-height: 100px;
+          }
+          @include media-breakpoint-up(lg) {
+            max-height: 150px;
+          }
         }
       }
       p.small {

@@ -198,16 +198,21 @@
         //}
         .accordion-header {
           font-family: $font-family-base;
-          font-size: $font-size-base * 1.3;
+          font-size: $font-size-base * 1;
           font-weight: 600;
           background-image: url(src/assets/images/faq/chevron-down.svg);
           background-repeat: no-repeat;
           background-position: center right;
 
-          padding: calc($grid-gutter-width/2) 0;
+          padding: calc($grid-gutter-width/2) $grid-gutter-width calc($grid-gutter-width/2) 0;
           border-bottom: 1px solid black;
 
           cursor: pointer;
+
+          @include media-breakpoint-up(lg) {
+            font-size: $font-size-base * 1.3;
+            padding: calc($grid-gutter-width/2) 0;
+          }
           &:hover {
             color: $primary;
           }

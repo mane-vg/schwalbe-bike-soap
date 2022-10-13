@@ -91,43 +91,78 @@
                 <div class="feature-wrapper" use:initFeatureSlider>
                     <div class="image-container">
                         <picture class="background">
-                            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background.avif" type="image/avif">
-                            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background.webp" type="image/webp">
-                            <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-square.jpg">
+                            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-square-small.avif 500w,
+                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-medium.avif 1000w,
+                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.avif 1500w" type="image/avif">
+                            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.webp 500w,
+                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.webp 1000w,
+                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.webp 1500w" type="image/webp">
+                            <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.jpg"
+                                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-square-small.jpg 500w,
+                                         src/assets/images/backgrounds/old-brown-paper-texture-background-square-medium.jpg 1000w,
+                                         src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.jpg 1500w" alt="Hintergrund braunes Papier">
                         </picture>
                         <div class="slide active">
                             <div class="slide-content">
                                 <picture>
-                                    <source srcset="src/assets/images/features/bike-soap-9.avif" type="image/avif">
-                                    <source srcset="src/assets/images/features/bike-soap-9.webp" type="image/webp">
-                                    <img src="src/assets/images/features/bike-soap-9.jpg">
+                                    <source srcset="src/assets/images/features/bike-soap-9-small.avif,
+                                                    src/assets/images/features/bike-soap-9-medium.avif,
+                                                    src/assets/images/features/bike-soap-9-large.avif" type="image/avif">
+                                    <source srcset="src/assets/images/features/bike-soap-9-small.webp,
+                                                    src/assets/images/features/bike-soap-9-medium.webp,
+                                                    src/assets/images/features/bike-soap-9-large.webp" type="image/webp">
+                                    <img src="src/assets/images/features/bike-soap-9-large.jpg"
+                                         srcset="src/assets/images/features/bike-soap-9-small.jpg,
+                                                 src/assets/images/features/bike-soap-9-medium.jpg,
+                                                 src/assets/images/features/bike-soap-9-large.jpg" alt="Schwalbe Bike Soap Frau mit Bürste">
                                 </picture>
                             </div>
                         </div>
                         <div class="slide next">
                             <div class="slide-content">
                                 <picture>
-                                    <source srcset="src/assets/images/features/bike-soap-12.avif" type="image/avif">
-                                    <source srcset="src/assets/images/features/bike-soap-12.webp" type="image/webp">
-                                    <img src="src/assets/images/features/bike-soap-12.jpg">
+                                    <source srcset="src/assets/images/features/bike-soap-12-small.avif,
+                                                    src/assets/images/features/bike-soap-12-medium.avif,
+                                                    src/assets/images/features/bike-soap-12-large.avif" type="image/avif">
+                                    <source srcset="src/assets/images/features/bike-soap-12-small.webp,
+                                                    src/assets/images/features/bike-soap-12-medium.webp,
+                                                    src/assets/images/features/bike-soap-12-large.webp" type="image/webp">
+                                    <img src="src/assets/images/features/bike-soap-12-large.jpg"
+                                         srcset="src/assets/images/features/bike-soap-12-small.jpg,
+                                                 src/assets/images/features/bike-soap-12-medium.jpg,
+                                                 src/assets/images/features/bike-soap-12-large.jpg" alt="Schwalbe Bike Soap Bürste am Fahrrad">
                                 </picture>
                             </div>
                         </div>
                         <div class="slide next">
                             <div class="slide-content">
                                 <picture>
-                                    <source srcset="src/assets/images/features/bike-soap-13.avif" type="image/avif">
-                                    <source srcset="src/assets/images/features/bike-soap-13.webp" type="image/webp">
-                                    <img src="src/assets/images/features/bike-soap-13.jpg">
+                                    <source srcset="src/assets/images/features/bike-soap-13-small.avif,
+                                                    src/assets/images/features/bike-soap-13-medium.avif,
+                                                    src/assets/images/features/bike-soap-13-large.avif" type="image/avif">
+                                    <source srcset="src/assets/images/features/bike-soap-13-small.webp,
+                                                    src/assets/images/features/bike-soap-13-medium.webp,
+                                                    src/assets/images/features/bike-soap-13-large.webp" type="image/webp">
+                                    <img src="src/assets/images/features/bike-soap-13-large.jpg"
+                                         srcset="src/assets/images/features/bike-soap-13-small.jpg,
+                                                 src/assets/images/features/bike-soap-13-medium.jpg,
+                                                 src/assets/images/features/bike-soap-13-large.jpg" alt="Schwalbe Bike Soap Fahrrad abspülen">
                                 </picture>
                             </div>
                         </div>
                     </div>
                     <div class="text-container">
                         <picture class="background">
-                            <source srcset="src/assets/images/features/feature-background.avif" type="image/avif">
-                            <source srcset="src/assets/images/features/feature-background.webp" type="image/webp">
-                            <img src="src/assets/images/features/feature-background.jpg">
+                            <source srcset="src/assets/images/features/feature-background-small.avif 500w,
+                                            src/assets/images/features/feature-background-medium.avif 1000w,
+                                            src/assets/images/features/feature-background-large.avif 1500w" type="image/avif">
+                            <source srcset="src/assets/images/features/feature-background-small.webp 500w,
+                                            src/assets/images/features/feature-background-medium.webp 1000w,
+                                            src/assets/images/features/feature-background-large.webp 1500w" type="image/webp">
+                            <img src="src/assets/images/features/feature-background-large.jpg"
+                                 srcet="src/assets/images/features/feature-background-small.jpg 500w,
+                                        src/assets/images/features/feature-background-medium.jpg 1000w,
+                                        src/assets/images/features/feature-background-large.jpg 1500w" alt="Braunes Papier Hintergrund mit Streifen">
                         </picture>
                         <div class="slide active">
                             <div class="slide-content">
@@ -169,16 +204,23 @@
             height: 350vh;
             .feature-wrapper {
               position: sticky;
-              top: 80px;
+              top: 130px;
               left: 0;
               right: 0;
-
-              height: 50vw;
-
+              height: calc(100vh - 130px);
               @include display-grid;
-              grid-template-columns: 1fr 1fr;
+              grid-template-columns: 1fr;
+              grid-template-rows: repeat(2, calc((100vh - 130px) / 2));
 
               overflow: hidden;
+
+              @include media-breakpoint-up(lg) {
+                top: 80px;
+                height: 50vw;
+
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: unset;
+              }
 
               .image-container {
                 position: relative;
@@ -197,6 +239,7 @@
 
                   img {
                     height: 100%;
+                    width: 100%;
                     object-fit: cover;
                   }
                 }
@@ -212,9 +255,12 @@
 
                   img {
                     opacity: 0;
-                    height: 100%;
                     object-fit: cover;
                     transition: opacity 1s;
+
+                    @include media-breakpoint-up(lg) {
+                      height: 100%;
+                    }
                   }
 
                   &.prev {
@@ -266,7 +312,12 @@
 
                   img {
                     height: 100%;
-                    object-fit: cover;
+                    width: 100%;
+
+                    @include media-breakpoint-up(lg) {
+                      object-fit: cover;
+                      width: unset;
+                    }
                   }
                 }
 
@@ -297,11 +348,21 @@
                   width: 100%;
 
                   .slide-content {
-                    padding: 0 22%;
+                    padding: 0 5%;
+                    @include media-breakpoint-up(lg) {
+                      padding: 0 22%;
+                    }
                     h3 {
-                      font-size: 120px;
+                      font-size: calc($h1-large-size / 3.5);
                       line-height: 1;
                       margin: 0;
+
+                      @include media-breakpoint-up(lg) {
+                        font-size: calc($h1-large-size * 6/7);
+                      }
+                      @include media-breakpoint-up(lg) {
+                        font-size: calc($h1-large-size * 6/7);
+                      }
                     }
                     p {
                       text-align: center;

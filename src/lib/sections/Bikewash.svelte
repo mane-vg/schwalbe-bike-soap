@@ -24,10 +24,12 @@
         </video>
         <div class="container">
             <div class="span-12">
-                <h2 class="h1 highlighted">Fahradwäsche?<br/><span class="green">Nachhaltig!</span></h2>
-                <p>Beginne jetzt dein Bike umweltschonend zu waschen.<br/>
-                    Deinem Bike zuliebe – und der Natur.</p>
-                <p><a href="https://schwalbe.com" class="btn btn-primary">Zum Produkt</a></p>
+                <div class="text-container">
+                    <h2 class="h1 highlighted">Fahradwäsche?<br/><span class="green">Nachhaltig!</span></h2>
+                    <p>Beginne jetzt dein Bike umweltschonend zu waschen.<br/>
+                        Deinem Bike zuliebe – und der Natur.</p>
+                    <p><a href="https://schwalbe.com" class="btn btn-primary">Zum Produkt</a></p>
+                </div>
             </div>
         </div>
     </div>
@@ -38,7 +40,6 @@
 
     section.bikewash {
       position: relative;
-      height: 100vh;
       video.background {
         position: absolute;
         top: 0;
@@ -46,15 +47,27 @@
         bottom: 0;
         right: 0;
         width: 100%;
+        height: 100%;
         object-fit: cover;
 
         z-index: -1;
       }
       .span-12 {
-        margin-top: $section-margin;
+        margin: $section-margin 0;
+        @include media-breakpoint-up(lg) {
+          height: 100vh;
+        }
+
+        .text-container {
+
+        }
       }
       h2.h1 {
-        font-size: $font-size-base * 6;
+        font-size: $font-size-base * 3.5;
+
+        @include media-breakpoint-up(lg) {
+          font-size: $font-size-base * 6;
+        }
         span.green {
           color: $green;
         }

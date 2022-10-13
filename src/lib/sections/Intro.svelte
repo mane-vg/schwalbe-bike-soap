@@ -58,18 +58,31 @@
         .text-container {
           text-align: center;
           h1 {
-            font-size: 160px;
+            text-align: center;
+            font-size: calc($h1-large-size / 2.25);
+            @include media-breakpoint-up(md) {
+              font-size: calc($h1-large-size / 2);
+            }
+            @include media-breakpoint-up(lg) {
+              font-size: calc($h1-large-size * 8/7);
+            }
           }
         }
         .bordered-container {
           margin-top: 50px;
           .span-container {
             display: inline-flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            padding: calc($section-margin/2) 0;
+            padding: calc($section-margin/4) 0;
             width: 100%;
+
+            @include media-breakpoint-up(lg) {
+              padding: calc($section-margin/2) 0;
+              flex-direction: row;
+            }
+
             span {
               font-family: $font-family-base;
               font-size: 26px;
@@ -77,6 +90,12 @@
               font-weight: 600;
               line-height: 1;
               align-self: center;
+              padding: calc($grid-gutter-width/2) 0;
+
+              @include media-breakpoint-up(lg) {
+                padding: 0;
+              }
+
               &.star {
                 margin-top: 13px;
                 line-height: 26px;

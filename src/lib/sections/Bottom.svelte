@@ -22,9 +22,16 @@
 <section class="bottom">
     <div class="row">
         <picture class="background">
-            <source srcset="src/assets/images/bottom/grass.avif" type="image/avif">
-            <source srcset="src/assets/images/bottom/grass.webp" type="image/webp">
-            <img src="src/assets/images/bottom/grass.jpg">
+            <source srcset="src/assets/images/bottom/grass-small.avif 750w,
+                            src/assets/images/bottom/grass-medium.avif 1200w,
+                            src/assets/images/bottom/grass-large.avif 1920w" type="image/avif">
+            <source srcset="src/assets/images/bottom/grass-small.webp 750w,
+                            src/assets/images/bottom/grass-medium.webp 1200w,
+                            src/assets/images/bottom/grass-large.webp 1920w" type="image/webp">
+            <img src="src/assets/images/bottom/grass-large.jpg"
+                 srcset="src/assets/images/bottom/grass-small.jpg 750w,
+                         src/assets/images/bottom/grass-medium.jpg 1200w,
+                         src/assets/images/bottom/grass-large.jpg 1920w" alt="Grünes Gras">
         </picture>
         <div class="container">
             <div class="span-12">
@@ -54,10 +61,23 @@
         left: 0;
         bottom: 0;
         right: 0;
-
+        top: 0;
         object-position: bottom;
 
         z-index: -1;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          @include media-breakpoint-up(lg) {
+            height: unset;
+            object-fit: unset;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          top: unset;
+        }
       }
 
       .span-12 {

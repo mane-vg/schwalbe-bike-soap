@@ -46,19 +46,40 @@
             <div class="col-left">
                 <div class="image-wrapper">
                     <picture use:initParallax={1.5}>
-                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter.avif" type="image/avif">
-                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter.webp" type="image/webp">
-                        <img src="src/assets/images/why/Unbound-Schwalbe-Peter.jpg">
+                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter-small.avif 200w,
+                                        src/assets/images/why/Unbound-Schwalbe-Peter-medium.avif 350w,
+                                        src/assets/images/why/Unbound-Schwalbe-Peter-large.avif 493w" type="image/avif">
+                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter-small.webp 200w,
+                                        src/assets/images/why/Unbound-Schwalbe-Peter-medium.webp 350w,
+                                        src/assets/images/why/Unbound-Schwalbe-Peter-large.webp 493w" type="image/webp">
+                        <img src="src/assets/images/why/Unbound-Schwalbe-Peter-large.jpg"
+                             srcset="src/assets/images/why/Unbound-Schwalbe-Peter-small.jpg 200w,
+                                     src/assets/images/why/Unbound-Schwalbe-Peter-medium.jpg 350w,
+                                     src/assets/images/why/Unbound-Schwalbe-Peter-large.jpg 493w" alt="Schwalbe Peter Krischio">
                     </picture>
                     <picture use:initParallax={1}>
-                        <source srcset="src/assets/images/why/streifen.avif" type="image/avif">
-                        <source srcset="src/assets/images/why/streifen.webp" type="image/webp">
-                        <img src="src/assets/images/why/streifen.png">
+                        <source srcset="src/assets/images/why/streifen-small.avif 200w,
+                                        src/assets/images/why/streifen-medium.avif 350w,
+                                        src/assets/images/why/streifen-large.avif 500w" type="image/avif">
+                        <source srcset="src/assets/images/why/streifen-small.webp 200w,
+                                        src/assets/images/why/streifen-medium.webp 350w,
+                                        src/assets/images/why/streifen-large.webp 500w" type="image/webp">
+                        <img src="../../assets/images/why/streifen-large.png"
+                             srcset="src/assets/images/why/streifen-small.png 200w,
+                                     src/assets/images/why/streifen-medium.png 350w,
+                                     src/assets/images/why/streifen-large.png 500w" alt="Streifenmuster">
                     </picture>
                     <picture use:initParallax={1.75}>
-                        <source srcset="src/assets/images/why/bike-soap-5.avif" type="image/avif">
-                        <source srcset="src/assets/images/why/bike-soap-5.webp" type="image/webp">
-                        <img src="src/assets/images/why/bike-soap-5.jpg">
+                        <source srcset="src/assets/images/why/bike-soap-5-small.avif 200w,
+                                        src/assets/images/why/bike-soap-5-medium.avif 350w,
+                                        src/assets/images/why/bike-soap-5-large.avif 500w" type="image/avif">
+                        <source srcset="src/assets/images/why/bike-soap-5-small.webp 200w,
+                                        src/assets/images/why/bike-soap-5-medium.webp 350w,
+                                        src/assets/images/why/bike-soap-5-large.webp 500w" type="image/webp">
+                        <img src="src/assets/images/why/bike-soap-5-large.jpg"
+                             srcset="src/assets/images/why/bike-soap-5-small.jpg 200w,
+                                     src/assets/images/why/bike-soap-5-medium.jpg 350w,
+                                     src/assets/images/why/bike-soap-5-large.jpg 500w" alt="Schwalbe Bike Soap">
                     </picture>
                 </div>
             </div>
@@ -66,7 +87,7 @@
                 <div class="quote-slider">
                     <img class="quote-open" src="src/assets/images/why/icon-quote-open.svg">
                     <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={3000}
-                              pauseOnFocus={true} dots={true} let:currentPageIndex let:pagesCount let:showPage>
+                              pauseOnFocus={true} dots={true} swiping={false} let:currentPageIndex let:pagesCount let:showPage>
                         <div class="slide">
                             <figure class="quote">
                                 <blockquote>
@@ -119,10 +140,18 @@
       }
 
       .col-left {
-        grid-column: 1/6;
+        grid-column: 1/13;
+        min-height: 50vh;
+        @include media-breakpoint-up(lg) {
+          grid-column: 1/6;
+          min-height: unset;
+        }
       }
       .col-right {
-        grid-column: 7/13;
+        grid-column: 1/13;
+        @include media-breakpoint-up(lg) {
+          grid-column: 7/13;
+        }
       }
       .image-wrapper {
         position: relative;
@@ -161,11 +190,15 @@
       .quote-slider {
         position: relative;
         .quote-open {
-          transform: translateX(-100%);
+          @include media-breakpoint-up(lg) {
+            transform: translateX(-100%);
+          }
         }
         .quote-close {
           float: right;
-          transform: translateX(-100%);
+          @include media-breakpoint-up(lg) {
+            transform: translateX(-100%);
+          }
         }
 
         .slide {
@@ -176,7 +209,10 @@
               margin: 0;
               p {
                 font-family: "Rock Salt";
-                font-size: $font-size-base * 1.6;
+
+                @include media-breakpoint-up(lg) {
+                  font-size: $font-size-base * 1.25;
+                }
               }
             }
           }

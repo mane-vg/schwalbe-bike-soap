@@ -12,9 +12,16 @@
     </div>
     <div class="row">
         <picture class="background">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background.avif" type="image/avif">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-square.webp" type="image/webp">
-            <img src="src/assets/images/backgrounds/old-brown-paper-texture-background.jpg">
+            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 750w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
+            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 750w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
+            <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
+                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
+                     src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
+                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w">
         </picture>
         <div class="container social-container">
             <a class="instagram-link account" href="https://instagram.com/" target="_blank"><img src="src/assets/images/social/icon-instagram.svg"></a>
@@ -24,9 +31,10 @@
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-1.avif" type="image/avif">
-                                <source srcset=".src/assets/images/social/bikesoap-instagram-1.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-1.jpg">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-1-large.avif" type="image/avif">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-1-large.webp" type="image/webp">
+                                <img src="src/assets/images/social/bikesoap-instagram-1.large.jpg"
+                                     srcset="src/assets/images/social/bikesoap-instagram-1-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
                         </div>
@@ -34,9 +42,9 @@
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-2.avif" type="image/avif">
-                                <source srcset="src/assets/images/social/bikesoap-instagram-2.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-2.jpg">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-2-large.avif" type="image/avif">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-2-large.webp" type="image/webp">
+                                <img src="src/assets/images/social/bikesoap-instagram-2-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
                         </div>
@@ -44,9 +52,10 @@
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-3.avif" type="image/avif">
-                                <source srcset="src/assets/images/social/bikesoap-instagram-3.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-3.jpg">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-3-large.avif" type="image/avif">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-3-large.webp" type="image/webp">
+                                <img src="src/assets/images/social/bikesoap-instagram-3-large.jpg"
+                                     srcset="src/assets/images/social/bikesoap-instagram-3-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
                         </div>
@@ -54,9 +63,10 @@
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-4.avif" type="image/avif">
-                                <source srcset="src/assets/images/social/bikesoap-instagram-4.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-4.jpg">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-4-large.avif" type="image/avif">
+                                <source srcset="src/assets/images/social/bikesoap-instagram-4-large.webp" type="image/webp">
+                                <img src="src/assets/images/social/bikesoap-instagram-4-large.jpg"
+                                     srcset="src/assets/images/social/bikesoap-instagram-4-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
                         </div>
@@ -82,6 +92,13 @@
         right: 0;
 
         z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
         &::before {
           content: ' ';
           position: absolute;
@@ -95,9 +112,13 @@
       }
 
       .social-slider {
-        grid-column: 6/8;
+        grid-column: 1/13;
         background-color: $darkgrey;
         border-radius: 4px;
+
+        @include media-breakpoint-up(lg) {
+          grid-column: 6/8;
+        }
         .slide {
           .slide-content {
             display: flex;
@@ -126,22 +147,35 @@
 
         hr {
           align-self: center;
-          grid-column: 4/6;
+          grid-column: 5/12;
           width: calc(100% - $grid-gutter-width);
           border-style: solid;
           border-width: 1px;
+
+          @include media-breakpoint-up(lg) {
+            grid-column: 4/6;
+          }
         }
 
         .instagram-link {
           &.account {
-            grid-column: 3;
+            grid-column: 2/5;
+            @include media-breakpoint-up(lg) {
+              grid-column: 3;
+            }
           }
           &.hashtag {
-            grid-column: 8/13;
-            justify-self: end;
-            font-size: $font-size-base * 10.9;
+            grid-column: 1/13;
+            justify-self: center;
+            font-size: $font-size-base * 4.5;
             text-decoration: none;
             color: white;
+
+            @include media-breakpoint-up(lg) {
+              grid-column: 8/13;
+              justify-self: end;
+              font-size: $font-size-base * 10.9;
+            }
           }
         }
       }

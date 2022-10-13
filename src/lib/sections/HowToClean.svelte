@@ -6,7 +6,6 @@
 
     function initHowToSlider(element) {
         let scrollHeight = element.querySelector('.slide.active').offsetHeight;
-
         element.style.height = scrollHeight + 'px';
         element.querySelectorAll('.slide').forEach((slide) => {
             slide.style.height = scrollHeight + 'px';
@@ -74,9 +73,16 @@
 
 <section class="how-to-clean">
     <picture class="background">
-        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background.avif" type="image/avif">
-        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background.webp" type="image/webp">
-        <img src="src/assets/images/backgrounds/old-brown-paper-texture-background.jpg">
+        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 750w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
+        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 750w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
+                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
+        <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
+             srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
+                     src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
+                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w">
     </picture>
     <div class="row">
         <div class="container">
@@ -85,7 +91,18 @@
             </div>
             <div class="span-12">
                 <div class="video-wrapper" use:initIframeEmbed>
-                    <img class="thumbnail" src="src/assets/images/howtoclean/bike-soap-thumb.jpg">
+                    <picture class="thumbnail">
+                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.avif 750w,
+                                        src/assets/images/howtoclean/bike-soap-thumb-large.avif 1200w,
+                                        src/assets/images/howtoclean/bike-soap-thumb-large.avif 1600w" type="image/avif">
+                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.webp 750w,
+                                        src/assets/images/howtoclean/bike-soap-thumb-large.webp 1200w,
+                                        src/assets/images/howtoclean/bike-soap-thumb-large.webp 1600w" type="image/webp">
+                        <img class="thumbnail" src="src/assets/images/howtoclean/bike-soap-thumb-large.jpg"
+                             srcset="src/assets/images/howtoclean/bike-soap-thumb-large.jpg 750w,
+                                     src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1200w,
+                                     src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1600w" alt="Frau wäscht Fahrrad">
+                    </picture>
                     <img class="play-button" src="src/assets/images/howtoclean/play-button.svg">
                 </div>
             </div>
@@ -101,9 +118,16 @@
                     <div class="slider-stage" use:initHowToSlider>
                         <div class="slide active">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-grober-schmutz.avif" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-grober-schmutz.webp" type="image/webp">
-                                        <img src="src/assets/images/howtoclean/icon-grober-schmutz.png">
+                                        <source srcset="src/assets/images/howtoclean/icon-grober-schmutz-small.avif 250w,
+                                                        src/assets/images/howtoclean/icon-grober-schmutz-medium.avif 400w,
+                                                        src/assets/images/howtoclean/icon-grober-schmutz-large.avif 526w" type="image/avif">
+                                        <source srcset="src/assets/images/howtoclean/icon-grober-schmutz-small.webp 250w,
+                                                        src/assets/images/howtoclean/icon-grober-schmutz-medium.webp 400w,
+                                                        src/assets/images/howtoclean/icon-grober-schmutz-large.webp 526w" type="image/webp">
+                                        <img src="../../assets/images/howtoclean/icon-grober-schmutz-large.png"
+                                             srcset="src/assets/images/howtoclean/icon-grober-schmutz-small.png 250w,
+                                                     src/assets/images/howtoclean/icon-grober-schmutz-medium.png 400w,
+                                                     src/assets/images/howtoclean/icon-grober-schmutz-large.png 526w" alt="Groben Schmutz mit Wasser entfernen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">1 &ndash;&nbsp;</span>
@@ -113,9 +137,16 @@
                                 </div>
                         <div class="slide next">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-seife-nass.avif" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-seife-nass.webp" type="image/webp">
-                                        <img src="src/assets/images/howtoclean/icon-seife-nass.png">
+                                        <source srcset="src/assets/images/howtoclean/icon-seife-nass-small.avif 250w,
+                                                        src/assets/images/howtoclean/icon-seife-nass-medium.avif 400w,
+                                                        src/assets/images/howtoclean/icon-seife-nass-large.avif 526w" type="image/avif">
+                                        <source srcset="src/assets/images/howtoclean/icon-seife-nass-small.webp 250w,
+                                                        src/assets/images/howtoclean/icon-seife-nass-medium.webp 400w,
+                                                        src/assets/images/howtoclean/icon-seife-nass-large.webp 526w" type="image/webp">
+                                        <img src="src/assets/images/howtoclean/icon-seife-nass-large.png"
+                                             srcset="src/assets/images/howtoclean/icon-seife-nass-small.png 250w,
+                                                     src/assets/images/howtoclean/icon-seife-nass-medium.png 400w,
+                                                     src/assets/images/howtoclean/icon-seife-nass-large.png 526w" alt="Seife mit Bürste aufschäumen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">2 &ndash;&nbsp;</span>
@@ -125,9 +156,16 @@
                                 </div>
                         <div class="slide next">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-buerste-einseifen.avif" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-buerste-einseifen.webp" type="image/webp">
-                                        <img src="src/assets/images/howtoclean/icon-buerste-einseifen.png">
+                                        <source srcset="src/assets/images/howtoclean/icon-buerste-einseifen-small.avif 250w,
+                                                        src/assets/images/howtoclean/icon-buerste-einseifen-medium.avif 400w,
+                                                        src/assets/images/howtoclean/icon-buerste-einseifen-large.avif 526w" type="image/avif">
+                                        <source srcset="src/assets/images/howtoclean/icon-buerste-einseifen-small.webp 250w,
+                                                        src/assets/images/howtoclean/icon-buerste-einseifen-medium.webp 400w,
+                                                        src/assets/images/howtoclean/icon-buerste-einseifen-large.webp 526w" type="image/webp">
+                                        <img src="src/assets/images/howtoclean/icon-buerste-einseifen-large.png"
+                                             srcset="src/assets/images/howtoclean/icon-buerste-einseifen-small.png 250w,
+                                                     src/assets/images/howtoclean/icon-buerste-einseifen-medium.png 400w,
+                                                     src/assets/images/howtoclean/icon-buerste-einseifen-large.png 526w" alt="Fahrrad mit Bürste und Seife reinigen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">3 &ndash;&nbsp;</span>
@@ -137,9 +175,16 @@
                                 </div>
                         <div class="slide next">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-abspuelen.avif" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-abspuelen.webp" type="image/webp">
-                                        <img src="src/assets/images/howtoclean/icon-abspuelen.png">
+                                        <source srcset="src/assets/images/howtoclean/icon-abspuelen-small.avif 250w,
+                                                        src/assets/images/howtoclean/icon-abspuelen-medium.avif 400w,
+                                                        src/assets/images/howtoclean/icon-abspuelen-large.avif 526w" type="image/avif">
+                                        <source srcset="src/assets/images/howtoclean/icon-abspuelen-small.webp 250w,
+                                                        src/assets/images/howtoclean/icon-abspuelen-medium.webp 400w,
+                                                        src/assets/images/howtoclean/icon-abspuelen-large.webp 526w" type="image/webp">
+                                        <img src="src/assets/images/howtoclean/icon-abspuelen-large.png"
+                                             srcset="src/assets/images/howtoclean/icon-abspuelen-small.png 250w,
+                                                     src/assets/images/howtoclean/icon-abspuelen-medium.png 400w,
+                                                     src/assets/images/howtoclean/icon-abspuelen-large.png 526w" alt="Seife abwaschen und in Blechdose verstauen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">4 &ndash;&nbsp;</span>
@@ -167,19 +212,44 @@
         right: 0;
         bottom: 0;
         left: 0;
-        height: 75%;
+        height: 60%;
 
         overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+          height: 75%;
+        }
+
+        img {
+          @include media-breakpoint-down(lg) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
       .row {
         .container {
+          @include media-breakpoint-down(md) {
+            margin: 0 (-$grid-margin-md);
+          }
+          @include media-breakpoint-down(sm) {
+            margin: 0 (-$grid-margin-sm);
+          }
+          @include media-breakpoint-down(xs) {
+            margin: 0 (-$grid-margin-xs);
+          }
           .span-8.offset-1 {
-            grid-column: 3/13;
+            grid-column: 1/13;
+            @include media-breakpoint-up(lg) {
+              grid-column: 3/13;
+            }
           }
         }
       }
 
       .video-wrapper {
+        position: relative;
         .thumbnail {
           cursor: pointer;
           opacity: 1;
@@ -194,6 +264,11 @@
           transition: transform 0.5s, opacity 0.5s;
           cursor: pointer;
           pointer-events: none;
+
+          @include media-breakpoint-down(lg) {
+            max-width: 100px;
+            top: 30%;
+          }
         }
         &:hover {
           .play-button {
@@ -204,46 +279,90 @@
 
       .slide {
         @include display-grid;
-        grid-template-columns: 250px 1fr;
-        grid-gap: 5rem;
+        grid-template-rows: auto auto;
+        grid-gap: 2rem;
+
+        @include media-breakpoint-up(lg) {
+          grid-template-columns: 250px 1fr;
+          grid-template-rows: auto;
+          grid-gap: 5rem;
+        }
 
         picture {
-          grid-column: 1;
+          @include media-breakpoint-down(lg) {
+            max-width: 50%;
+            margin: 0 auto;
+          }
+
+          @include media-breakpoint-up(lg) {
+            grid-column: 1;
+          }
         }
         .text-container {
           position: relative;
-          grid-column: 2;
+          @include media-breakpoint-down(md) {
+            margin: 0 $grid-margin-md;
+          }
+          @include media-breakpoint-down(sm) {
+            margin: 0 $grid-margin-sm;
+          }
+          @include media-breakpoint-down(xs) {
+            margin: 0 $grid-margin-xs;
+          }
+          @include media-breakpoint-down(lg) {
+            text-align: center;
+          }
+          @include media-breakpoint-up(lg) {
+            grid-column: 2;
+          }
           span.highlighted {
             display: inline-block;
-            font-size: $font-size-base * 10.9;
+            font-size: $font-size-base * 4.5;
             color: white;
             grid-column: 2;
             line-height: 1;
             text-transform: uppercase;
 
+            //transform: translate(-4rem, -1.5rem);
+
+            @include media-breakpoint-up(lg) {
+              font-size: $font-size-base * 10.9;
+            }
+
             &.count {
-              position: absolute;
-              left: 0;
-              top: 0;
-              transform: translate(-10rem, -5rem);
+              @include media-breakpoint-up(lg) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translate(-10+rem, -1.5rem);
+              }
             }
             &.desc {
-              transform: translate(-0rem, -5rem);
+              @include media-breakpoint-up(lg) {
+                transform: translate(-0rem, -5rem);
+              }
             }
           }
           p {
-            transform: translate(-0rem, -5rem);
-            max-width: 55%;
+            @include media-breakpoint-up(lg) {
+              max-width: 55%;
+              transform: translate(-0rem, -5rem);
+            }
           }
         }
       }
 
       .slider-wrapper {
         position: relative;
-        margin-top: $section-margin;
+        margin-top: $section-margin * 0.5;
+        margin-bottom: $section-margin * 0.5;
+        @include media-breakpoint-up(lg) {
+          margin-top: $section-margin;
+          margin-bottom: $section-margin;
+        }
         .carousel-next, .carousel-prev {
           position: absolute;
-          top: 50%;
+          top: 30%;
           transform: translateY(-50%);
           background: none;
           border: none;
@@ -251,9 +370,18 @@
           cursor: pointer;
 
           transition: opacity 1s;
+
+          z-index: 3;
+
+          @include media-breakpoint-up(lg) {
+            top: 50%;
+          }
         }
         .carousel-prev {
-          left: -20%;
+          left: 0;
+          @include media-breakpoint-up(lg) {
+            left: -20%;
+          }
         }
         .carousel-next {
           right: 0;
@@ -262,8 +390,12 @@
 
       .slider-stage {
         position: relative;
-        padding: 100px 0;
+        padding: 0 0 250px 0;
         overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+          padding: 100px 0;
+        }
         .slide {
           position: absolute;
           left: 0;
@@ -273,7 +405,12 @@
             transition: opacity 1s;
           }
           span.highlighted {
-            transition: transform 1s;
+            @include media-breakpoint-down(lg) {
+              transition: opacity 1s;
+            }
+            @include media-breakpoint-up(lg) {
+              transition: transform 1s;
+            }
           }
           p {
             opacity: 0;
@@ -282,16 +419,26 @@
 
           &.active {
             position: relative;
-            top: 100px;
+
+            @include media-breakpoint-up(lg) {
+              top: 100px;
+            }
             picture {
               opacity: 1;
             }
             span.highlighted {
+              @include media-breakpoint-down(lg) {
+                opacity: 1;
+              }
               &.count {
-                transform: translate(-10rem, -5rem);
+                @include media-breakpoint-up(lg) {
+                  transform: translate(-10rem, -5rem);
+                }
               }
               &.desc {
-                transform: translate(0, -5rem);
+                @include media-breakpoint-up(lg) {
+                  transform: translate(0, -5rem);
+                }
               }
             }
             p {
@@ -300,21 +447,35 @@
           }
           &.prev {
             span.highlighted {
+              @include media-breakpoint-down(lg) {
+                opacity: 0;
+              }
               &.count {
-                transform: translate(-10rem, -50rem);
+                @include media-breakpoint-up(lg) {
+                  transform: translate(-10rem, -50rem);
+                }
               }
               &.desc {
-                transform: translate(0, -50rem);
+                @include media-breakpoint-up(lg) {
+                  transform: translate(0, -50rem);
+                }
               }
             }
           }
           &.next {
             span.highlighted {
+              @include media-breakpoint-down(lg) {
+                opacity: 0;
+              }
               &.count {
-                transform: translate(-10rem, 50rem);
+                @include media-breakpoint-up(lg) {
+                  transform: translate(-10rem, 50rem);
+                }
               }
               &.desc {
-                transform: translate(0, 50rem);
+                @include media-breakpoint-up(lg) {
+                  transform: translate(0, 50rem);
+                }
               }
             }
           }

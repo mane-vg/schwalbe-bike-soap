@@ -9,6 +9,7 @@ $font-body: $font-family-sans-serif;
 
 // stylelint-enable value-keyword-case
 
+$h1-large-size: 140px;
 $font-size-base: 1.25rem; // 20px
 $font-size-lg: $font-size-base*1.33; //32px
 $font-size-md: 0.75em; //18px
@@ -40,20 +41,52 @@ $font-heading: $headings-font-family;
 $headings-font-weight: 400;
 
 h1, .h1 {
+  font-size: calc($h1-large-size/2.5);
+  @include media-breakpoint-up(md) {
+    font-size: calc($h1-large-size/1.5);
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: $h1-large-size;
+  }
+  font-family: 'Titillium Web';
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1;
   text-transform: uppercase;
   text-align: start;
 }
 
 h2, .h2 {
-  font-size: 48px;
+  font-size: $font-size-base * 2.4;
+  font-family: 'Titillium Web';
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: $section-margin * 0.7;
+  margin-bottom: $section-margin * 0.35;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base * 2.4;
+    margin-bottom: $section-margin * 0.7;
+  }
 }
 
 h3, .h3 {
+  font-size: $font-size-base * 1.75;
+  font-family: 'Titillium Web';
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base * 1.75;
+  }
+}
+
+h4, .h4 {
+  font-size: 26px;
+  font-family: "Titillium Web";
+  font-weight: 600;
 }
 
 p {
