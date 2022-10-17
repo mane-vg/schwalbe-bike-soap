@@ -5,7 +5,13 @@
     export let ytID = '0gor32MSyiA';
 
     function initHowToSlider(element) {
-        let scrollHeight = element.querySelector('.slide.active').offsetHeight;
+        let scrollHeight;
+        if(window.innerWidth < 900) {
+            scrollHeight = element.querySelector('.slide.active').offsetHeight + element.querySelector('.slide.active .text-container').offsetHeight;
+        } else {
+            scrollHeight = element.querySelector('.slide.active').offsetHeight;
+        }
+        // let scrollHeight = element.querySelector('.slide.active').offsetHeight + element.querySelector('.slide.active .text-container').offsetHeight;
         element.style.height = scrollHeight + 'px';
         element.querySelectorAll('.slide').forEach((slide) => {
             slide.style.height = scrollHeight + 'px';
@@ -265,14 +271,22 @@
           cursor: pointer;
           pointer-events: none;
 
-          @include media-breakpoint-down(lg) {
+          @include media-breakpoint-down(md) {
             max-width: 100px;
             top: 30%;
+          }
+
+          @include media-breakpoint-up(lg) {
+            transform: translate(-50%, -50%) scale(1);
           }
         }
         &:hover {
           .play-button {
             transform: translate(-50%, 0) scale(1.25);
+
+            @include media-breakpoint-up(lg) {
+              transform: translate(-50%, -50%) scale(1.25);
+            }
           }
         }
       }
@@ -280,8 +294,14 @@
       .slide {
         @include display-grid;
         grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
         grid-gap: 2rem;
 
+        //@include media-breakpoint-up(md) {
+        //  grid-template-columns: 200px 1fr;
+        //  grid-template-rows: auto;
+        //  grid-gap: 5rem;
+        //}
         @include media-breakpoint-up(lg) {
           grid-template-columns: 250px 1fr;
           grid-template-rows: auto;
@@ -289,11 +309,19 @@
         }
 
         picture {
-          @include media-breakpoint-down(lg) {
-            max-width: 50%;
+          @include media-breakpoint-down(md) {
+            max-width: 25%;
+            margin: 0 auto;
+          }
+          @include media-breakpoint-down(sm) {
+            max-width: 45%;
             margin: 0 auto;
           }
 
+          /*@include media-breakpoint-up(md) {
+            max-width: 100%;
+            margin: unset;
+          }*/
           @include media-breakpoint-up(lg) {
             grid-column: 1;
           }
@@ -301,15 +329,17 @@
         .text-container {
           position: relative;
           @include media-breakpoint-down(md) {
-            margin: 0 $grid-margin-md;
+            max-width: 60%;
+            margin: 0 auto;
           }
           @include media-breakpoint-down(sm) {
+            max-width: 100%;
             margin: 0 $grid-margin-sm;
           }
           @include media-breakpoint-down(xs) {
             margin: 0 $grid-margin-xs;
           }
-          @include media-breakpoint-down(lg) {
+          @include media-breakpoint-down(md) {
             text-align: center;
           }
           @include media-breakpoint-up(lg) {
@@ -326,6 +356,9 @@
             //transform: translate(-4rem, -1.5rem);
 
             @include media-breakpoint-up(lg) {
+              font-size: $font-size-base * 7.6;
+            }
+            @include media-breakpoint-up(xl) {
               font-size: $font-size-base * 10.9;
             }
 
@@ -334,17 +367,30 @@
                 position: absolute;
                 left: 0;
                 top: 0;
-                transform: translate(-10+rem, -1.5rem);
+                transform: translate(-10rem, -1.5rem);
+              }
+              @include media-breakpoint-up(xl) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translate(-10rem, -1.5rem);
               }
             }
             &.desc {
               @include media-breakpoint-up(lg) {
+                transform: translate(-0rem, -4rem);
+              }
+              @include media-breakpoint-up(xl) {
                 transform: translate(-0rem, -5rem);
               }
             }
           }
           p {
             @include media-breakpoint-up(lg) {
+              max-width: 75%;
+              transform: translate(-0rem, -5rem);
+            }
+            @include media-breakpoint-up(xl) {
               max-width: 55%;
               transform: translate(-0rem, -5rem);
             }
@@ -356,9 +402,12 @@
         position: relative;
         margin-top: $section-margin * 0.5;
         margin-bottom: $section-margin * 0.5;
+        //margin: calc($section-margin * 0.5) calc($grid-gutter-width/2);
+
         @include media-breakpoint-up(lg) {
           margin-top: $section-margin;
-          margin-bottom: $section-margin;
+          margin-bottom: 0;
+          //margin: $section-margin 0;
         }
         .carousel-next, .carousel-prev {
           position: absolute;
@@ -390,7 +439,7 @@
 
       .slider-stage {
         position: relative;
-        padding: 0 0 250px 0;
+        padding: 0 0 50px 0;
         overflow: hidden;
 
         @include media-breakpoint-up(lg) {
@@ -432,11 +481,17 @@
               }
               &.count {
                 @include media-breakpoint-up(lg) {
+                  transform: translate(-10rem, -4rem);
+                }
+                @include media-breakpoint-up(xl) {
                   transform: translate(-10rem, -5rem);
                 }
               }
               &.desc {
                 @include media-breakpoint-up(lg) {
+                  transform: translate(0, -4rem);
+                }
+                @include media-breakpoint-up(xl) {
                   transform: translate(0, -5rem);
                 }
               }

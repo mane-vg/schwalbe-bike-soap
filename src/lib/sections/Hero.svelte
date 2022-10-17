@@ -58,11 +58,14 @@
   @import "src/assets/scss/_import.scss";
     .hero {
       position: relative;
-      height: calc(100vh - 130px);
+      height: calc(100vh - 170px);
       padding: 20px;
       overflow: hidden;
 
       @include media-breakpoint-up(lg) {
+        height: calc(100vh - 130px);
+      }
+      @include media-breakpoint-up(xl) {
         height: calc(100vh - 120px);
       }
 

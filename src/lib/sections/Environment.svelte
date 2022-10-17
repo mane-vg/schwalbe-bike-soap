@@ -34,7 +34,7 @@
           max-height: 75px;
 
           @include media-breakpoint-up(md) {
-            max-height: 100px;
+            max-height: 125px;
           }
           @include media-breakpoint-up(lg) {
             max-height: 150px;

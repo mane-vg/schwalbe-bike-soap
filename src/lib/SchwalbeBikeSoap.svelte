@@ -14,18 +14,18 @@
 </script>
 
 <div style="height: 100%">
-<Hero />
-<Intro />
-<Starterset />
-<StartersetContents />
-<Environment />
-<Features />
-<HowToClean />
-<Why />
-<Social />
-<FAQ />
-<Bikewash />
-<Bottom />
+    <Hero />
+    <Intro />
+    <Starterset />
+    <StartersetContents />
+    <Environment />
+    <Features />
+    <HowToClean />
+    <Why />
+    <Social />
+    <FAQ />
+    <Bikewash />
+    <Bottom />
 </div>
 
 <style lang="scss">

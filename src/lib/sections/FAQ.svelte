@@ -9,6 +9,22 @@
         }
         element.querySelector('.accordion-header').addEventListener('click', openAccordion);
 
+        window.addEventListener('orientationchange', function(event) {
+            if(element.classList.contains('open')) {
+                setTimeout(function() {
+                    element.querySelector('.accordion-content').style.maxHeight = element.querySelector('.accordion-content .accordion-content-inner').scrollHeight + 'px';
+                }, 1);
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            if(element.classList.contains('open')) {
+                setTimeout(function() {
+                    element.querySelector('.accordion-content').style.maxHeight = element.querySelector('.accordion-content .accordion-content-inner').scrollHeight + 'px';
+                }, 1);
+            }
+        });
+
         function openAccordion(event) {
             element.classList.toggle('open');
             if(element.classList.contains('open')) {

@@ -117,6 +117,9 @@
         border-radius: 4px;
 
         @include media-breakpoint-up(lg) {
+          grid-column: 4/8;
+        }
+        @include media-breakpoint-up(xl) {
           grid-column: 6/8;
         }
         .slide {
@@ -153,6 +156,9 @@
           border-width: 1px;
 
           @include media-breakpoint-up(lg) {
+            grid-column: 2/4;
+          }
+          @include media-breakpoint-up(xl) {
             grid-column: 4/6;
           }
         }
@@ -160,7 +166,11 @@
         .instagram-link {
           &.account {
             grid-column: 2/5;
+
             @include media-breakpoint-up(lg) {
+              grid-column: 1;
+            }
+            @include media-breakpoint-up(xl) {
               grid-column: 3;
             }
           }
@@ -172,6 +182,11 @@
             color: white;
 
             @include media-breakpoint-up(lg) {
+              grid-column: 8/13;
+              justify-self: end;
+              font-size: $font-size-base * 7.6;
+            }
+            @include media-breakpoint-up(xl) {
               grid-column: 8/13;
               justify-self: end;
               font-size: $font-size-base * 10.9;

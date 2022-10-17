@@ -86,8 +86,8 @@
             <div class="col-right">
                 <div class="quote-slider">
                     <img class="quote-open" src="src/assets/images/why/icon-quote-open.svg">
-                    <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={3000}
-                              pauseOnFocus={true} dots={true} swiping={false} let:currentPageIndex let:pagesCount let:showPage>
+                    <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={5000}
+                              pauseOnFocus={true} dots={true} swiping={false} duration={500} let:currentPageIndex let:pagesCount let:showPage>
                         <div class="slide">
                             <figure class="quote">
                                 <blockquote>

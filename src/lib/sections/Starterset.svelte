@@ -113,6 +113,12 @@
               transform: translate(-15%, var(--translate-x));
             }
             @include media-breakpoint-up(lg) {
+              max-width: 150px;
+              --translate-x: -200px;
+              --translate-x-max: 300px;
+              transform: translate(-20%, var(--translate-x));
+            }
+            @include media-breakpoint-up(xl) {
               max-width: unset;
               --translate-x: -255px;
               --translate-x-max: 335px;
@@ -127,7 +133,10 @@
               margin: -60px 0 60px 0;
             }
             @include media-breakpoint-up(lg) {
-              margin: -125px 0 100px 0;
+              margin: -100px 0 100px 0;
+            }
+            @include media-breakpoint-up(xl) {
+              margin: -110px 0 100px 0;
             }
 
             h2 {
@@ -138,6 +147,9 @@
                 font-size: calc($h1-large-size / 2);
               }
               @include media-breakpoint-up(lg) {
+                font-size: calc($h1-large-size * 4/5);
+              }
+              @include media-breakpoint-up(xl) {
                 font-size: calc($h1-large-size * 6/7);
               }
             }
@@ -156,6 +168,7 @@
               }
               @include media-breakpoint-up(lg) {
                 font-size: calc($h1-large-size / 2);
+                margin-top: -2rem;
               }
 
               .identifier {

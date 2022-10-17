@@ -164,6 +164,8 @@
                                         src/assets/images/features/feature-background-medium.jpg 1000w,
                                         src/assets/images/features/feature-background-large.jpg 1500w" alt="Braunes Papier Hintergrund mit Streifen">
                         </picture>
+                        <hr class="top"/>
+                        <hr class="bottom"/>
                         <div class="slide active">
                             <div class="slide-content">
                                 <h3 class="highlighted">Lange Nutzungsdauer</h3>
@@ -216,10 +218,14 @@
 
               @include media-breakpoint-up(lg) {
                 top: 80px;
-                height: 50vw;
+                height: calc(100vh - 80px);
 
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: unset;
+              }
+              @include media-breakpoint-up(xl) {
+                top: 80px;
+                height: 50vw;
               }
 
               .image-container {
@@ -257,6 +263,11 @@
                     opacity: 0;
                     object-fit: cover;
                     transition: opacity 1s;
+
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
 
                     @include media-breakpoint-up(lg) {
                       height: 100%;
@@ -314,9 +325,35 @@
                     height: 100%;
                     width: 100%;
 
-                    @include media-breakpoint-up(lg) {
+                    @include media-breakpoint-up(xl) {
                       object-fit: cover;
                       width: unset;
+                    }
+                  }
+                }
+
+                hr.top, hr.bottom {
+                  position: absolute;
+                  width: 75%;
+                  left: 50%;
+                  transform: translateX(-50%);
+
+                  &.top {
+                    top: calc($section-margin/5);
+                    @include media-breakpoint-up(md) {
+                      top: calc($section-margin/2);
+                    }
+                    @include media-breakpoint-up(lg) {
+                      top: calc($section-margin/1.25);
+                    }
+                  }
+                  &.bottom {
+                    bottom: calc($section-margin/5);
+                    @include media-breakpoint-up(md) {
+                      bottom: calc($section-margin/2);
+                    }
+                    @include media-breakpoint-up(lg) {
+                      bottom: calc($section-margin/1.25);
                     }
                   }
                 }
@@ -349,18 +386,28 @@
 
                   .slide-content {
                     padding: 0 5%;
+
+                    @include media-breakpoint-up(md) {
+                      padding: 25%;
+                    }
                     @include media-breakpoint-up(lg) {
-                      padding: 0 22%;
+                      padding: 10%;
+                    }
+                    @include media-breakpoint-up(xl) {
+                      padding: 0 15%;
                     }
                     h3 {
                       font-size: calc($h1-large-size / 3.75);
                       line-height: 1;
                       margin: 0;
 
+                      //@include media-breakpoint-up(md) {
+                      //  font-size: calc($h1-large-size * 3/7);
+                      //}
                       @include media-breakpoint-up(lg) {
-                        font-size: calc($h1-large-size * 6/7);
+                        font-size: calc($h1-large-size * 3/7);
                       }
-                      @include media-breakpoint-up(lg) {
+                      @include media-breakpoint-up(xl) {
                         font-size: calc($h1-large-size * 6/7);
                       }
                     }

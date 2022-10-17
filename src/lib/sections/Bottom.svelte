@@ -3,6 +3,20 @@
 
     export let fadeIn;
 
+    function activeInViewport(element) {
+        let options = {rootMargin: '0px 0px 0px 0px', threshold: 1};
+
+        let callback = (entries, observer) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
+        let introSectionObserver = new IntersectionObserver(callback, options);
+        introSectionObserver.observe(element);
+    }
+
     function fadeInWhenInViewport(element) {
         let options = {rootMargin: '0px 0px 0px 0px', threshold: 1};
         let callback = (entries, observer) => {
@@ -33,9 +47,12 @@
                          src/assets/images/bottom/grass-medium.jpg 1200w,
                          src/assets/images/bottom/grass-large.jpg 1920w" alt="Grünes Gras">
         </picture>
-        <div class="container">
-            <div class="span-12">
-                <img src="src/assets/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg">
+        <div class="container gras-container" use:activeInViewport>
+            <img class="logo" src="src/assets/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg">
+            <div class="text-wrapper">
+                <h3>GO GREEN. RIDE CLEAN.</h3>
+                <p>Unsere Bike Care Produkte sorgen nicht nur für strahlende Bikes sondern auch für eine saubere Natur,
+                    denn sie vereinen Umweltverträglichkeit und beste Reinigungskraft, wie kein anderes Produkt.</p>
             </div>
         </div>
     </div>
@@ -77,6 +94,63 @@
 
         @include media-breakpoint-up(lg) {
           top: unset;
+        }
+      }
+
+      .gras-container {
+        padding: $section-margin*1.5 0;
+
+        .text-wrapper {
+          grid-column: 1/13;
+          align-self: center;
+          opacity: 0;
+
+          transform: translateY(30%);
+
+          @include media-breakpoint-up(md) {
+            transform: unset;
+            grid-column: 6/12;
+          }
+          @include media-breakpoint-up(lg) {
+            grid-column: 6/10;
+          }
+          h3 {
+            text-align: left;
+          }
+        }
+
+        img.logo {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: top 1s, transform 1s;
+
+          @include media-breakpoint-up(md) {
+            transform: translate(-50%, -50%);
+            transition: transform 1s;
+          }
+        }
+
+        &.active {
+          .text-wrapper {
+            opacity: 1;
+            transition: opacity 1s;
+          }
+          img.logo {
+            top: calc($section-margin/2);
+            transform: translate(-50%, -0%);
+            @include media-breakpoint-up(md) {
+              top: 50%;
+              transform: translate(-150%, -50%);
+            }
+            @include media-breakpoint-up(lg) {
+              transform: translate(-175%, -50%);
+            }
+            @include media-breakpoint-up(xl) {
+              transform: translate(-200%, -50%);
+            }
+          }
         }
       }
 

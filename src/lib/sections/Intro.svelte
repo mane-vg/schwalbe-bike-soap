@@ -73,7 +73,7 @@
           .span-container {
             display: inline-flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             padding: calc($section-margin/4) 0;
             width: 100%;
@@ -92,8 +92,13 @@
               align-self: center;
               padding: calc($grid-gutter-width/2) 0;
 
+
               @include media-breakpoint-up(lg) {
                 padding: 0;
+                margin: 0 1rem;
+              }
+              @include media-breakpoint-up(xl) {
+                margin: 0 1.5rem;
               }
 
               &.star {
