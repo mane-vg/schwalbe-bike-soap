@@ -167,22 +167,25 @@
                     </div>-->
                 <div class="carousel-wrapper" use:initCarousel>
                     <div class="carousel-control carousel-prev" class:active={controlPrevActive}>
-                        <img src="src/assets/images/carousel/chevron-left.svg">
+                        <img src="src/assets/images/carousel/chevron-left.svg" alt="Pfeil links">
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-stage" use:swipe={{timeframe: 300, minSwipeDistance: 50, touchAction: 'pan-y'}} on:swipe={carouselSwipeHandler}>
                             <div class="slide">
                                 <picture>
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-beutel-small.avif 400w,
-                                            src/assets/images/starterset-content/bikesoap-beutel-medium.avif 600w,
-                                            src/assets/images/starterset-content/bikesoap-beutel-large.avif 758w" type="image/avif">
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-beutel-small.webp 400w,
-                                            src/assets/images/starterset-content/bikesoap-beutel-medium.webp 600w,
-                                            src/assets/images/starterset-content/bikesoap-beutel-large.webp 758w" type="image/webp">
-                                    <img src="src/assets/images/starterset-content/bikesoap-beutel-large.jpg"
-                                         srcset="src/assets/images/starterset-content/bikesoap-beutel-small.jpg 400w,
-                                         src/assets/images/starterset-content/bikesoap-beutel-medium.jpg 600w,
-                                         src/assets/images/starterset-content/bikesoap-beutel-large.jpg 758w" alt="Schwalbe Bikesoap Beutel">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-xsmall.avif 400w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-small.avif 600w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-medium.avif 758w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-large.avif 1033w" type="image/avif">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-xsmall.webp 400w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-small.webp 600w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-medium.webp 758w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-large.webp 1033w" type="image/webp">
+                                    <img src="src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-large.jpg"
+                                         srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-xsmall.jpg 400w,
+                                         src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-small.jpg 600w,
+                                         src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-medium.jpg 758w,
+                                         src/assets/images/starterset-content/schwalbe_bikeSoap_09_beutel-large.jpg 1033w" alt="Schwalbe Bikesoap Beutel">
                                 </picture>
                                 <div class="slide-text">
                                     <h4>Beutel</h4>
@@ -191,16 +194,19 @@
                             </div>
                             <div class="slide">
                                 <picture>
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-seife-small.avif 400w,
-                                            src/assets/images/starterset-content/bikesoap-seife-medium.avif 600w,
-                                            src/assets/images/starterset-content/bikesoap-seife-large.avif 758w" type="image/avif">
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-seife-small.webp 400w,
-                                            src/assets/images/starterset-content/bikesoap-seife-medium.webp 600w,
-                                            src/assets/images/starterset-content/bikesoap-seife-large.webp 758w" type="image/webp">
-                                    <img src="src/assets/images/starterset-content/bikesoap-seife-large.jpg"
-                                         srcset="src/assets/images/starterset-content/bikesoap-seife-small.jpg 400w,
-                                         src/assets/images/starterset-content/bikesoap-seife-medium.jpg 600w,
-                                         src/assets/images/starterset-content/bikesoap-seife-large.jpg 758w" alt="Schwalbe Bikesoap Seife">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-xsmall.avif 400w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-small.avif 600w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-medium.avif 758w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-large.avif 1033w" type="image/avif">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-xsmall.webp 400w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-small.webp 600w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-medium.webp 758w,
+                                            src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-large.webp 1033w" type="image/webp">
+                                    <img src="src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-large.jpg"
+                                         srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-xsmall.jpg 400w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-small.jpg 600w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-medium.jpg 758w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_05_seife-large.jpg 1033w" alt="Schwalbe Bikesoap Seife">
                                 </picture>
                                 <div class="slide-text">
                                     <h4>Seife</h4>
@@ -209,16 +215,19 @@
                             </div>
                             <div class="slide">
                                 <picture>
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-buerste-small.avif 400w,
-                                            src/assets/images/starterset-content/bikesoap-buerste-medium.avif 600w,
-                                            src/assets/images/starterset-content/bikesoap-buerste-large.avif 758w" type="image/avif">
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-buerste-small.webp 400w,
-                                            src/assets/images/starterset-content/bikesoap-buerste-medium.webp 600w,
-                                            src/assets/images/starterset-content/bikesoap-buerste-large.webp 758w" type="image/webp">
-                                    <img src="src/assets/images/starterset-content/bikesoap-buerste-large.jpg"
-                                         srcset="src/assets/images/starterset-content/bikesoap-buerste-small.jpg 400w,
-                                         src/assets/images/starterset-content/bikesoap-buerste-medium.jpg 600w,
-                                         src/assets/images/starterset-content/bikesoap-buerste-large.jpg 758w" alt="Schwalbe Bikesoap Bürste">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-xsmall.avif 400w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-small.avif 600w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-medium.avif 758w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-large.avif 1033w" type="image/avif">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-xsmall.webp 400w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-small.webp 600w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-medium.webp 758w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-large.webp 1033w" type="image/webp">
+                                    <img src="src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-large.jpg"
+                                         srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-xsmall.jpg 400w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-small.jpg 600w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-medium.jpg 758w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_01_buerste-large.jpg 1033w" alt="Schwalbe Bikesoap Bürste">
                                 </picture>
                                 <div class="slide-text">
                                     <h4>Bürste</h4>
@@ -227,16 +236,19 @@
                             </div>
                             <div class="slide">
                                 <picture>
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-box-small.avif 400w,
-                                            src/assets/images/starterset-content/bikesoap-box-medium.avif 600w,
-                                            src/assets/images/starterset-content/bikesoap-box-large.avif 758w" type="image/avif">
-                                    <source srcset="src/assets/images/starterset-content/bikesoap-box-small.webp 400w,
-                                            src/assets/images/starterset-content/bikesoap-box-medium.webp 600w,
-                                            src/assets/images/starterset-content/bikesoap-box-large.webp 758w" type="image/webp">
-                                    <img src="src/assets/images/starterset-content/bikesoap-box-large.jpg"
-                                         srcset="src/assets/images/starterset-content/bikesoap-box-small.jpg 400w,
-                                         src/assets/images/starterset-content/bikesoap-box-medium.jpg 600w,
-                                         src/assets/images/starterset-content/bikesoap-box-large.jpg 758w" alt="Schwalbe Bikesoap Box">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-xsmall.avif 400w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-small.avif 600w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-medium.avif 758w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-large.avif 1033w" type="image/avif">
+                                    <source srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-xsmall.webp 400w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-small.webp 600w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-medium.webp 758w,
+                                                    src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-large.webp 1033w" type="image/webp">
+                                    <img src="src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-large.jpg"
+                                         srcset="src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-xsmall.jpg 400w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-small.jpg 600w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-medium.jpg 758w,
+                                                 src/assets/images/starterset-content/schwalbe_bikeSoap_02_box-large.jpg 1033w" alt="Schwalbe Bikesoap Box">
                                 </picture>
                                 <div class="slide-text">
                                     <h4>Box</h4>
@@ -246,7 +258,7 @@
                         </div>
                     </div>
                     <div class="carousel-control carousel-next" class:active={controlNextActive}>
-                        <img src="src/assets/images/carousel/chevron-right.svg">
+                        <img src="src/assets/images/carousel/chevron-right.svg" alt="Pfeil rechts">
                     </div>
                 </div>
                     <!--<div slot="next" on:click={showNextPage} class="carousel-control carousel-next" class:active={carouselIndex < carouselMaxIndex}>

@@ -1,11 +1,15 @@
 <script>
     import Carousel from 'svelte-carousel';
 
-    export let maxOffset = 0;
+    // export let maxOffset = 0;
 
-    function initParallax(element, multiplier) {
+    function initParallax(element, parameters) {
         let oldPosition;
         let initialOffset = parseInt(getComputedStyle(element).getPropertyValue('--translate-x'));
+
+        if(window.innerWidth < 1200) {
+            parameters.maxOffset = 0;
+        }
 
         let options = {};
         let callback = (entries, observer) => {
@@ -26,10 +30,12 @@
             let position = element.getBoundingClientRect().y;
             let offset = parseInt(getComputedStyle(element).getPropertyValue('--translate-x'));
             if(position < oldPosition) {
-                let xValue = Math.min(maxOffset, (offset - (position - oldPosition)/multiplier));
+                console.log(parameters.maxOffset);
+                let xValue = Math.min(parameters.maxOffset, (offset - (position - oldPosition)/parameters.multiplier));
+                console.log(xValue);
                 element.style.setProperty('--translate-x', xValue + 'px');
             } else {
-                let xValue = Math.max(initialOffset, (offset - (position - oldPosition)/multiplier));
+                let xValue = Math.max(initialOffset, (offset - (position - oldPosition)/parameters.multiplier));
                 element.style.setProperty('--translate-x', xValue + 'px');
             }
             oldPosition = position;
@@ -45,7 +51,7 @@
             </div>
             <div class="col-left">
                 <div class="image-wrapper">
-                    <picture use:initParallax={1.5}>
+                    <picture use:initParallax={{multiplier: 1.5, maxOffset: 50}}>
                         <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter-small.avif 200w,
                                         src/assets/images/why/Unbound-Schwalbe-Peter-medium.avif 350w,
                                         src/assets/images/why/Unbound-Schwalbe-Peter-large.avif 493w" type="image/avif">
@@ -57,7 +63,7 @@
                                      src/assets/images/why/Unbound-Schwalbe-Peter-medium.jpg 350w,
                                      src/assets/images/why/Unbound-Schwalbe-Peter-large.jpg 493w" alt="Schwalbe Peter Krischio">
                     </picture>
-                    <picture use:initParallax={1}>
+                    <picture use:initParallax={{multiplier: 1, maxOffset: 50}}>
                         <source srcset="src/assets/images/why/streifen-small.avif 200w,
                                         src/assets/images/why/streifen-medium.avif 350w,
                                         src/assets/images/why/streifen-large.avif 500w" type="image/avif">
@@ -69,7 +75,7 @@
                                      src/assets/images/why/streifen-medium.png 350w,
                                      src/assets/images/why/streifen-large.png 500w" alt="Streifenmuster">
                     </picture>
-                    <picture use:initParallax={1.75}>
+                    <picture use:initParallax={{multiplier: 1.75, maxOffset: 0}}>
                         <source srcset="src/assets/images/why/bike-soap-5-small.avif 200w,
                                         src/assets/images/why/bike-soap-5-medium.avif 350w,
                                         src/assets/images/why/bike-soap-5-large.avif 500w" type="image/avif">
@@ -85,7 +91,7 @@
             </div>
             <div class="col-right">
                 <div class="quote-slider">
-                    <img class="quote-open" src="src/assets/images/why/icon-quote-open.svg">
+                    <img class="quote-open" src="src/assets/images/why/icon-quote-open.svg" alt="Quote open">
                     <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={5000}
                               pauseOnFocus={true} dots={true} swiping={false} duration={500} let:currentPageIndex let:pagesCount let:showPage>
                         <div class="slide">
@@ -95,7 +101,7 @@
                                         häufig viele Bikes zu waschen und dabei weniger Reinigungsmaterial einzusetzen,
                                         das wesentlich länger hält.</p>
                                 </blockquote>
-                                <figcaption>Peter Krischio<br/>Product Manager</figcaption>
+                                <figcaption><span>Peter Krischio</span><br/>Product Manager</figcaption>
                             </figure>
                         </div>
                         <div class="slide">
@@ -103,7 +109,7 @@
                                 <blockquote>
                                     <p>Ganz einfach: Sie hält sehr lange und lässt sich sehr umweltfreundlich entwickeln.</p>
                                 </blockquote>
-                                <figcaption>Peter Krischio<br/>Product Manager</figcaption>
+                                <figcaption><span>Peter Krischio</span><br/>Product Manager</figcaption>
                             </figure>
                         </div>
                         <div class="slide">
@@ -112,7 +118,7 @@
                                     <p>Eine Seife reicht für bis zu 100 Wäschen – wenn man das auf den Preis von 7,90 Euro mal herunterrechnet,
                                        ist eine einzelne Wäsche enorm günstig.</p>
                                 </blockquote>
-                                <figcaption>Peter Krischio<br/>Product Manager</figcaption>
+                                <figcaption><span>Peter Krischio</span><br/>Product Manager</figcaption>
                             </figure>
                         </div>
                         <div slot="dots" class="carousel-dots">
@@ -121,7 +127,7 @@
                             {/each}
                         </div>
                     </Carousel>
-                    <img class="quote-close" src="src/assets/images/why/icon-quote-close.svg">
+                    <img class="quote-close" src="src/assets/images/why/icon-quote-close.svg" alt="Quote close">
                 </div>
             </div>
         </div>
@@ -132,6 +138,15 @@
   @import "src/assets/scss/_import.scss";
 
     section.why {
+      .container {
+        grid-row-gap: $grid-gutter-width * 4;
+        @include media-breakpoint-up(md) {
+
+        }
+        @include media-breakpoint-up(lg) {
+          grid-row-gap: unset;
+        }
+      }
       .span-12 {
         z-index: 4;
         h2 {
@@ -167,11 +182,13 @@
           transition: transform 0.1s;
 
           &:nth-child(1) {
+            --translate-x: -200px;
             top: 0;
             left: 10%;
             z-index: 3;
           }
           &:nth-child(2) {
+            --translate-x: -275px;
             top: 25%;
             left: 0;
 
@@ -180,6 +197,7 @@
             z-index: 2;
           }
           &:nth-child(3) {
+            --translate-x: -300px;
             bottom: 0;
             right: 0;
             z-index: 1;
@@ -211,8 +229,16 @@
                 font-family: "Rock Salt";
 
                 @include media-breakpoint-up(lg) {
-                  font-size: $font-size-base * 1.25;
+                  font-size: $font-size-base * 1.6;
                 }
+              }
+            }
+            figcaption {
+              padding-left: 2rem;
+              font-family: $font-family-base;
+              font-size: $font-size-base * 1.3;
+              span {
+                font-weight: 600;
               }
             }
           }

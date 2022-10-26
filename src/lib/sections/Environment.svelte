@@ -8,12 +8,12 @@
             <div class="span-8">
                 <h3>Gut für die Umwelt – gut für dein Bike</h3>
                 <div class="image-wrapper">
-                    <img class="svg" src="src/assets/images/environment/icon_phosphate-silicone.svg">
-                    <img class="svg" src="src/assets/images/environment/icon_dermatologically-tested.svg">
-                    <img class="svg" src="src/assets/images/environment/icon_microplastic-free.svg">
-                    <img class="svg" src="src/assets/images/environment/icon_vegan.svg">
+                    <img class="svg" src="src/assets/images/environment/icon_phosphate-silicone.svg" alt="Phosphate and silicone free">
+                    <img class="svg" src="src/assets/images/environment/icon_dermatologically-tested.svg" alt="Dermatologically tested">
+                    <img class="svg" src="src/assets/images/environment/icon_microplastic-free.svg" alt="Microplastic free">
+                    <img class="svg" src="src/assets/images/environment/icon_vegan.svg" alt="Vegan">
                 </div>
-                <p class="small center-text">Zu 100% leicht biologisch abbaubar nach OECD.</p>
+                <p class="small center-text">Zu 100 % leicht biologisch abbaubar nach OECD.</p>
             </div>
         </div>
     </div>

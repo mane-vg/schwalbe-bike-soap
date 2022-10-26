@@ -168,7 +168,7 @@
                         <hr class="bottom"/>
                         <div class="slide active">
                             <div class="slide-content">
-                                <h3 class="highlighted">Lange Nutzungsdauer</h3>
+                                <h3 class="highlighted">Lange <br class="no-xs"/>Nutzungsdauer</h3>
                                 <p>Eine Seife reicht für bis zu 100 Wäschen. Für eine Wäsche reicht es aus,
                                     die Bürste zwei bis dreimal wieder frisch mit der Seife einzuschäumen.</p>
                             </div>
@@ -339,7 +339,10 @@
                   transform: translateX(-50%);
 
                   &.top {
-                    top: calc($section-margin/5);
+                    top: calc($section-margin/10);
+                    @include media-breakpoint-up(xs) {
+                      top: calc($section-margin/5);
+                    }
                     @include media-breakpoint-up(md) {
                       top: calc($section-margin/2);
                     }
@@ -348,7 +351,10 @@
                     }
                   }
                   &.bottom {
-                    bottom: calc($section-margin/5);
+                    bottom: calc($section-margin/10);
+                    @include media-breakpoint-up(xs) {
+                      bottom: calc($section-margin/5);
+                    }
                     @include media-breakpoint-up(md) {
                       bottom: calc($section-margin/2);
                     }
@@ -385,8 +391,7 @@
                   width: 100%;
 
                   .slide-content {
-                    padding: 0 5%;
-
+                    padding: 0 7.5%;
                     @include media-breakpoint-up(md) {
                       padding: 25%;
                     }
@@ -394,13 +399,16 @@
                       padding: 10%;
                     }
                     @include media-breakpoint-up(xl) {
-                      padding: 0 15%;
+                      padding: 0 10%;
                     }
                     h3 {
-                      font-size: calc($h1-large-size / 3.75);
+                      font-size: calc($h1-large-size / 4.25);
                       line-height: 1;
                       margin: 0;
 
+                      @include media-breakpoint-up(xs) {
+                        font-size: calc($h1-large-size / 3.75);
+                      }
                       //@include media-breakpoint-up(md) {
                       //  font-size: calc($h1-large-size * 3/7);
                       //}
@@ -410,12 +418,20 @@
                       @include media-breakpoint-up(xl) {
                         font-size: calc($h1-large-size * 6/7);
                       }
+
+                      .no-xs {
+                        @include media-breakpoint-down(xs) {
+                          display: none;
+                        }
+                      }
                     }
                     p {
                       text-align: center;
-
                       @include media-breakpoint-down(md) {
                         font-size: $font-size-base * 0.8;
+                      }
+                      @include media-breakpoint-up(lg) {
+                        padding: 0 10%;
                       }
                     }
                   }

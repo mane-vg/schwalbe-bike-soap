@@ -20,7 +20,7 @@
         <img src="src/assets/images/hero/hero_background_large.jpg"
              srcset="src/assets/images/hero/hero_background_small.jpg 750w,
                      src/assets/images/hero/hero_background_medium.jpg 1000w,
-                     src/assets/images/hero/hero_background_large.jpg 1920w">
+                     src/assets/images/hero/hero_background_large.jpg 1920w" alt="Papiertextur mit Streifen">
     </picture>
     <picture class="motive">
         <source srcset="src/assets/images/hero/hero_motive-small.avif 750w,
@@ -32,7 +32,7 @@
         <img src="./src/assets/images/hero/hero_motive.jpg"
              srcset="src/assets/images/hero/hero_motive-small.jpg 750w,
                      src/assets/images/hero/hero_motive-medium.jpg 1200w,
-                     src/assets/images/hero/hero_motive.jpg 1920w">
+                     src/assets/images/hero/hero_motive.jpg 1920w" alt="Idillische Landschaft">
     </picture>
     {#if loaded}
         <picture transition:fly={{delay: 500, duration: 1500, y: 750, opacity: 1}} class="bikesoap">
@@ -45,7 +45,7 @@
             <img src="../../assets/images/hero/bikesoapset-auf-baumstamm-large.png"
                  srcset="src/assets/images/hero/bikesoapset-auf-baumstamm-small.png 750w,
                          src/assets/images/hero/bikesoapset-auf-baumstamm-medium.png 1200w,
-                         src/assets/images/hero/bikesoapset-auf-baumstamm-large.png 1920w">
+                         src/assets/images/hero/bikesoapset-auf-baumstamm-large.png 1920w" alt="Schwalbe Bike Soap Starterset auf Baumstamm">
         </picture>
     {/if}
     <div class="text-container">
@@ -119,6 +119,7 @@
           margin: 0;
         }
         p {
+          font-family: $font-family-base;
           font-size: $font-size-base * 1.3;
           margin: 0;
 

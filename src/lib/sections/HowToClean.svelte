@@ -2,7 +2,7 @@
 
     export let prev = true;
     export let next = true;
-    export let ytID = '0gor32MSyiA';
+    export let ytID = 'ZabXvqVOEIo';
 
     function initHowToSlider(element) {
         let scrollHeight;
@@ -88,7 +88,7 @@
         <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
              srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
                      src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
-                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w">
+                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
     </picture>
     <div class="row">
         <div class="container">
@@ -109,17 +109,27 @@
                                      src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1200w,
                                      src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1600w" alt="Frau wäscht Fahrrad">
                     </picture>
-                    <img class="play-button" src="src/assets/images/howtoclean/play-button.svg">
+                    <img class="play-button" src="src/assets/images/howtoclean/play-button.svg" alt="Playbutton">
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="container">
+            <div class="span-8">
+                <h3>Schritt für Schritt zum sauberen Bike</h3>
+            </div>
             <div class="span-8 offset-1">
                 <div class="slider-wrapper">
                     {#if prev}
-                        <button class="carousel-prev"><img src="src/assets/images/howtoclean/chevron-left.svg"></button>
+                        <button class="carousel-prev">
+                            <svg x="0px" y="0px" viewBox="0 0 113 113" style="enable-background:new 0 0 113 113;" width="113" height="113" xml:space="preserve">
+                                <style type="text/css">.st0{fill:none;stroke:#2E2D2B;stroke-width:9;}</style>
+                                <g transform="translate(-1623 -3331)">
+                                    <path id="Pfad_686" class="st0" d="M1694.9,3350.7l-30.6,37l30.6,37.7"/>
+                                </g>
+                            </svg>
+                        </button>
                     {/if}
                     <div class="slider-stage" use:initHowToSlider>
                         <div class="slide active">
@@ -200,7 +210,14 @@
                                 </div>
                     </div>
                     {#if next}
-                        <button class="carousel-next"><img src="src/assets/images/howtoclean/chevron-right.svg"></button>
+                        <button class="carousel-next">
+                            <svg x="0px" y="0px" viewBox="0 0 113 113" style="enable-background:new 0 0 113 113;" width="113" height="113" xml:space="preserve">
+                                <style type="text/css">.st0{fill:none;stroke:#2E2D2B;stroke-width:9;}</style>
+                                <g transform="translate(-1623 -3331)">
+                                    <path class="st0" d="M1664.1,3424.3l30.6-37l-30.6-37.7"/>
+                                </g>
+                            </svg>
+                        </button>
                     {/if}
                 </div>
             </div>
@@ -423,7 +440,18 @@
           z-index: 3;
 
           @include media-breakpoint-up(lg) {
-            top: 50%;
+            top: calc(50% - 2.5rem);
+          }
+
+          &:hover {
+            svg {
+              g {
+                path {
+                  fill: none;
+                  stroke: $primary;
+                }
+              }
+            }
           }
         }
         .carousel-prev {
@@ -450,6 +478,7 @@
           left: 0;
 
           picture {
+            mix-blend-mode: multiply;
             opacity: 0;
             transition: opacity 1s;
           }
@@ -458,7 +487,7 @@
               transition: opacity 1s;
             }
             @include media-breakpoint-up(lg) {
-              transition: transform 1s;
+              transition: transform 1s, opacity 1s;
             }
           }
           p {
@@ -502,34 +531,36 @@
           }
           &.prev {
             span.highlighted {
+              opacity: 0;
               @include media-breakpoint-down(lg) {
                 opacity: 0;
               }
               &.count {
                 @include media-breakpoint-up(lg) {
-                  transform: translate(-10rem, -50rem);
+                  transform: translate(-10rem, -8rem);
                 }
               }
               &.desc {
                 @include media-breakpoint-up(lg) {
-                  transform: translate(0, -50rem);
+                  transform: translate(0, -8rem);
                 }
               }
             }
           }
           &.next {
             span.highlighted {
+              opacity: 0;
               @include media-breakpoint-down(lg) {
                 opacity: 0;
               }
               &.count {
                 @include media-breakpoint-up(lg) {
-                  transform: translate(-10rem, 50rem);
+                  transform: translate(-10rem, 0.5rem);
                 }
               }
               &.desc {
                 @include media-breakpoint-up(lg) {
-                  transform: translate(0, 50rem);
+                  transform: translate(0, 0.5rem);
                 }
               }
             }

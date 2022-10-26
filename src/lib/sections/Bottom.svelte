@@ -48,7 +48,7 @@
                          src/assets/images/bottom/grass-large.jpg 1920w" alt="Grünes Gras">
         </picture>
         <div class="container gras-container" use:activeInViewport>
-            <img class="logo" src="src/assets/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg">
+            <img class="logo" src="src/assets/images/bottom/schwalbe-bike-care.svg" alt="Schwalbe Bike Care Logo">
             <div class="text-wrapper">
                 <h3>GO GREEN. RIDE CLEAN.</h3>
                 <p>Unsere Bike Care Produkte sorgen nicht nur für strahlende Bikes sondern auch für eine saubere Natur,
@@ -98,7 +98,7 @@
       }
 
       .gras-container {
-        padding: $section-margin*1.5 0;
+        padding: $section-margin*2 0;
 
         .text-wrapper {
           grid-column: 1/13;
@@ -112,7 +112,7 @@
             grid-column: 6/12;
           }
           @include media-breakpoint-up(lg) {
-            grid-column: 6/10;
+            grid-column: 6/11;
           }
           h3 {
             text-align: left;

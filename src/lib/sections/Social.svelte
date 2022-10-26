@@ -21,10 +21,10 @@
             <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
                  srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
                      src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
-                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w">
+                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
         </picture>
         <div class="container social-container">
-            <a class="instagram-link account" href="https://instagram.com/" target="_blank"><img src="src/assets/images/social/icon-instagram.svg"></a>
+            <a class="instagram-link account" href="https://instagram.com/" target="_blank"><img src="src/assets/images/social/icon-instagram.svg" alt="Icon Instagram"></a>
             <hr/>
             <div class="social-slider">
                 <Carousel particlesToShow={1} particlesToScroll={1} arrows={false} autoplay={true} pauseOnFocus={true} dots={false} swiping={false}>

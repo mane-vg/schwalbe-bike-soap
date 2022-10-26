@@ -34,6 +34,22 @@
             oldPosition = position;
         }
     }
+
+    function initZoom(element) {
+        let options = {threshold: 1};
+        let callback = (entries, observer) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting) {
+                    element.querySelector('img').style.transform = 'scale(1.25)';
+                }
+                if(!entry.isIntersecting) {
+                    element.querySelector('img').style.transform = '';
+                }
+            });
+        };
+        let imageObserver = new IntersectionObserver(callback, options);
+        imageObserver.observe(element);
+    }
 </script>
 
 <section class="starterset">
@@ -48,12 +64,12 @@
             <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
                  srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
                          src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
-                         src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" type="image/webp">
+                         src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
         </picture>
         <div class="container" use:initParallax>
-            <img class="icon-parallax" src="src/assets/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg" type="img/svg">
+            <img class="icon-parallax" src="src/assets/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg" type="img/svg" alt="Schwalbe Bike Soap: Jetzt erhältlich">
             <div class="span-12">
-                <picture class="">
+                <picture class="" use:initZoom>
                     <source srcset="src/assets/images/starterset/bike-soap-8-small.avif 750w,
                                     src/assets/images/starterset/bike-soap-8-medium.avif 1200w,
                                     src/assets/images/starterset/bike-soap-8-large.avif 1920w" type="image/avif">
@@ -63,7 +79,7 @@
                     <img src="src/assets/images/starterset/bike-soap-8-large.jpg"
                          srcset="src/assets/images/starterset/bike-soap-8-small.jpg 750w,
                                  src/assets/images/starterset/bike-soap-8-medium.jpg 1200w,
-                                 src/assets/images/starterset/bike-soap-8-large.jpg 1920w">
+                                 src/assets/images/starterset/bike-soap-8-large.jpg 1920w" alt="Schwalbe BikeSoap im Einsatz">
                 </picture>
             </div>
             <div class="text-container">
@@ -98,6 +114,15 @@
         }
         .container {
           position: relative;
+          .span-12 {
+            overflow: hidden;
+            picture {
+              img {
+                transform: scale(1);
+                transition: transform 1.5s ease-in-out;
+              }
+            }
+          }
           .icon-parallax {
             position: absolute;
             left: 0;
@@ -107,6 +132,7 @@
             --translate-x-max: 0;
             transform: translate(-25%, var(--translate-x));
             transition: transform 0.1s;
+            z-index: 1;
 
             @include media-breakpoint-up(md) {
               max-width: 120px;
@@ -122,12 +148,13 @@
               max-width: unset;
               --translate-x: -255px;
               --translate-x-max: 335px;
-              transform: translate(-50%, var(--translate-x));
+              transform: translate(-30%, var(--translate-x));
             }
           }
           .text-container {
             grid-column: 3/13;
             margin: -35px 0 100px 0;
+            z-index: 1;
 
             @include media-breakpoint-up(md) {
               margin: -60px 0 60px 0;
@@ -162,6 +189,7 @@
               font-weight: bold;
               display: inline-block;
               float: right;
+              font-family: "Titillium Web";
 
               @include media-breakpoint-up(md) {
                 font-size: calc($h1-large-size / 2);
