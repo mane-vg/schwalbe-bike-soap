@@ -1,7 +1,9 @@
 <script>
+    import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
 
     export let accordionMore = false;
+    export let viewportWidth = 1920;
 
     function initAccordion(element) {
         if(element.classList.contains('open')) {
@@ -34,6 +36,10 @@
             }
         }
     }
+
+    onMount(() => {
+        viewportWidth = window.innerWidth;
+    });
 </script>
 
 <section class="faq">
@@ -44,7 +50,7 @@
             </div>
             <div class="span-10">
                 <div class="accordion">
-                    <div class="accordion-item open" use:initAccordion>
+                    <div class="accordion-item" class:open={window.innerWidth >= 900} use:initAccordion>
                         <div class="accordion-header">
                             Warum sollte ich bei der Bike-Wäsche auf ein natürliches Produkt zurückgreifen?
                         </div>
@@ -263,7 +269,10 @@
     }
 
     .button-holder {
-      margin-top: $section-margin * 0.7;
+      margin-top: $section-margin * 0.35;
+      @include media-breakpoint-up(lg) {
+        margin-top: $section-margin * 0.7;
+      }
       a {
         cursor: pointer;
       }

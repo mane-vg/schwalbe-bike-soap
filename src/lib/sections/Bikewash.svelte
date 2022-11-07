@@ -53,17 +53,19 @@
         z-index: -1;
       }
       .row {
-        &:after {
-          content: ' ';
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
+        @include media-breakpoint-down(md) {
+          &:after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
 
-          background: rgba(white, 0.2);
+            background: rgba(white, 0.2);
 
-          z-index: 0;
+            z-index: 0;
+          }
         }
       }
       .span-12 {

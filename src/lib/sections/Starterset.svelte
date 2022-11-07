@@ -16,7 +16,9 @@
             });
         };
         let startersetObserver = new IntersectionObserver(callback, options);
-        startersetObserver.observe(item);
+        if(window.innerWidth >= 900) {
+            startersetObserver.observe(item);
+        }
 
         let startingOffset = parseInt(getComputedStyle(item).getPropertyValue('--translate-x'));
         let maxOffset = parseInt(getComputedStyle(item).getPropertyValue('--translate-x-max'));
@@ -55,14 +57,14 @@
 <section class="starterset">
     <div class="row">
         <picture class="background">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 750w,
+            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
                             src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
                             src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 750w,
+            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
                             src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
                             src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp" type="image/webp">
             <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
-                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
+                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
                          src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
                          src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
         </picture>
@@ -70,14 +72,14 @@
             <img class="icon-parallax" src="src/assets/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg" type="img/svg" alt="Schwalbe Bike Soap: Jetzt erhältlich">
             <div class="span-12">
                 <picture class="" use:initZoom>
-                    <source srcset="src/assets/images/starterset/bike-soap-8-small.avif 750w,
+                    <source srcset="src/assets/images/starterset/bike-soap-8-small.avif 1170w,
                                     src/assets/images/starterset/bike-soap-8-medium.avif 1200w,
                                     src/assets/images/starterset/bike-soap-8-large.avif 1920w" type="image/avif">
-                    <source srcset="src/assets/images/starterset/bike-soap-8-small.webp 750w,
+                    <source srcset="src/assets/images/starterset/bike-soap-8-small.webp 1170w,
                                     src/assets/images/starterset/bike-soap-8-medium.webp 1200w,
                                     src/assets/images/starterset/bike-soap-8-large.webp 1920w" type="image/webp">
                     <img src="src/assets/images/starterset/bike-soap-8-large.jpg"
-                         srcset="src/assets/images/starterset/bike-soap-8-small.jpg 750w,
+                         srcset="src/assets/images/starterset/bike-soap-8-small.jpg 1170w,
                                  src/assets/images/starterset/bike-soap-8-medium.jpg 1200w,
                                  src/assets/images/starterset/bike-soap-8-large.jpg 1920w" alt="Schwalbe BikeSoap im Einsatz">
                 </picture>
@@ -118,6 +120,7 @@
             overflow: hidden;
             picture {
               img {
+                width: 100%;
                 transform: scale(1);
                 transition: transform 1.5s ease-in-out;
               }
@@ -125,20 +128,23 @@
           }
           .icon-parallax {
             position: absolute;
-            left: 0;
-            top: 30%;
-            max-width: 70px;
+            left: 10%;
+            top: 40%;
+            max-width: 85px;
             --translate-x: -125px;
             --translate-x-max: 0;
             transform: translate(-25%, var(--translate-x));
             transition: transform 0.1s;
             z-index: 1;
+            mix-blend-mode: color-burn;
 
             @include media-breakpoint-up(md) {
               max-width: 120px;
               transform: translate(-15%, var(--translate-x));
             }
             @include media-breakpoint-up(lg) {
+              left: 0;
+              top: 30%;
               max-width: 150px;
               --translate-x: -200px;
               --translate-x-max: 300px;
@@ -152,8 +158,8 @@
             }
           }
           .text-container {
-            grid-column: 3/13;
-            margin: -35px 0 100px 0;
+            grid-column: 2/13;
+            margin: -45px 0 35px 0;
             z-index: 1;
 
             @include media-breakpoint-up(md) {
@@ -167,7 +173,7 @@
             }
 
             h2 {
-              font-size: calc($h1-large-size / 3.75);
+              font-size: 3rem;//calc($h1-large-size / 3.75);
               color: white;
 
               @include media-breakpoint-up(md) {
@@ -185,13 +191,16 @@
               float: left;
             }
             .uvp {
-              font-size: calc($h1-large-size / 4);
+              font-size: calc($h1-large-size / 6);
               font-weight: bold;
               display: inline-block;
               float: right;
               font-family: "Titillium Web";
+              line-height: 1;
+              margin-top: 0.75rem;
 
               @include media-breakpoint-up(md) {
+                margin-top: 0;
                 font-size: calc($h1-large-size / 2);
               }
               @include media-breakpoint-up(lg) {

@@ -90,7 +90,7 @@
               font-weight: 600;
               line-height: 1;
               align-self: center;
-              padding: calc($grid-gutter-width/2) 0;
+              //padding: calc($grid-gutter-width/2) 0;
 
 
               @include media-breakpoint-up(lg) {

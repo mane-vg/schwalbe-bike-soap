@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte';
     import Carousel from 'svelte-carousel';
 
     // export let maxOffset = 0;
@@ -9,6 +10,10 @@
 
         if(window.innerWidth < 1200) {
             parameters.maxOffset = 0;
+        }
+
+        if(window.innerWidth < 450) {
+            return;
         }
 
         let options = {};
@@ -30,9 +35,7 @@
             let position = element.getBoundingClientRect().y;
             let offset = parseInt(getComputedStyle(element).getPropertyValue('--translate-x'));
             if(position < oldPosition) {
-                console.log(parameters.maxOffset);
                 let xValue = Math.min(parameters.maxOffset, (offset - (position - oldPosition)/parameters.multiplier));
-                console.log(xValue);
                 element.style.setProperty('--translate-x', xValue + 'px');
             } else {
                 let xValue = Math.max(initialOffset, (offset - (position - oldPosition)/parameters.multiplier));
@@ -41,6 +44,11 @@
             oldPosition = position;
         }
     }
+
+    onMount(() => {
+        window.addEventListener('resize', initParallax);
+        window.addEventListener('orientationchange', initParallax);
+    });
 </script>
 
 <section class="why">
@@ -139,7 +147,6 @@
 
     section.why {
       .container {
-        grid-row-gap: $grid-gutter-width * 4;
         @include media-breakpoint-up(md) {
 
         }
@@ -152,18 +159,24 @@
         h2 {
           margin-bottom: $section-margin * 0.7;
         }
+        @include media-breakpoint-down(md) {
+          order: 2;
+        }
       }
 
       .col-left {
         grid-column: 1/13;
         min-height: 50vh;
+        order: 1;
         @include media-breakpoint-up(lg) {
+          order: 2;
           grid-column: 1/6;
           min-height: unset;
         }
       }
       .col-right {
         grid-column: 1/13;
+        order: 3;
         @include media-breakpoint-up(lg) {
           grid-column: 7/13;
         }
@@ -175,32 +188,42 @@
         picture {
           position: absolute;
 
-          max-width: 55%;
+          max-width: 65%;
 
-          --translate-x: -200px;
           transform: translateY(var(--translate-x));
           transition: transform 0.1s;
+          @include media-breakpoint-up(lg) {
+            max-width: 55%;
+            --translate-x: -200px;
+          }
 
           &:nth-child(1) {
-            --translate-x: -200px;
             top: 0;
             left: 10%;
             z-index: 3;
+            @include media-breakpoint-up(lg) {
+              --translate-x: -200px;
+            }
           }
           &:nth-child(2) {
-            --translate-x: -275px;
+
             top: 25%;
             left: 0;
 
             mix-blend-mode: multiply;
 
             z-index: 2;
+            @include media-breakpoint-up(lg) {
+              --translate-x: -275px;
+            }
           }
           &:nth-child(3) {
-            --translate-x: -300px;
             bottom: 0;
             right: 0;
             z-index: 1;
+            @include media-breakpoint-up(lg) {
+              --translate-x: -300px;
+            }
           }
         }
       }
@@ -208,12 +231,14 @@
       .quote-slider {
         position: relative;
         .quote-open {
+          max-width: 20%;
           @include media-breakpoint-up(lg) {
             transform: translateX(-100%);
           }
         }
         .quote-close {
           float: right;
+          max-width: 20%;
           @include media-breakpoint-up(lg) {
             transform: translateX(-100%);
           }
@@ -221,6 +246,8 @@
 
         .slide {
           //padding: 0 $grid-gutter-width;
+          display: flex;
+          align-items: center;
           figure.quote {
             margin: 0 10px;
             blockquote {
@@ -236,7 +263,10 @@
             figcaption {
               padding-left: 2rem;
               font-family: $font-family-base;
-              font-size: $font-size-base * 1.3;
+              font-size: $font-size-base;
+              @include media-breakpoint-up(lg) {
+                font-size: $font-size-base * 1.3;
+              }
               span {
                 font-weight: 600;
               }
@@ -247,6 +277,7 @@
 
       .carousel-dots {
         display: flex;
+        margin-top: 1rem;
         .carousel-dot {
           display: inline-block;
           background: transparent;

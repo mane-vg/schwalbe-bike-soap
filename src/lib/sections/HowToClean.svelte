@@ -79,14 +79,14 @@
 
 <section class="how-to-clean">
     <picture class="background">
-        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 750w,
+        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
-        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 750w,
+        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
         <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
-             srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
+             srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
                      src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
                      src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
     </picture>
@@ -98,14 +98,14 @@
             <div class="span-12">
                 <div class="video-wrapper" use:initIframeEmbed>
                     <picture class="thumbnail">
-                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.avif 750w,
+                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.avif 1170w,
                                         src/assets/images/howtoclean/bike-soap-thumb-large.avif 1200w,
                                         src/assets/images/howtoclean/bike-soap-thumb-large.avif 1600w" type="image/avif">
-                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.webp 750w,
+                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.webp 1170w,
                                         src/assets/images/howtoclean/bike-soap-thumb-large.webp 1200w,
                                         src/assets/images/howtoclean/bike-soap-thumb-large.webp 1600w" type="image/webp">
                         <img class="thumbnail" src="src/assets/images/howtoclean/bike-soap-thumb-large.jpg"
-                             srcset="src/assets/images/howtoclean/bike-soap-thumb-large.jpg 750w,
+                             srcset="src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1170w,
                                      src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1200w,
                                      src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1600w" alt="Frau wäscht Fahrrad">
                     </picture>
@@ -331,8 +331,8 @@
             margin: 0 auto;
           }
           @include media-breakpoint-down(sm) {
-            max-width: 45%;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0 $grid-gutter-width * 2;
           }
 
           /*@include media-breakpoint-up(md) {
@@ -417,13 +417,17 @@
 
       .slider-wrapper {
         position: relative;
-        margin-top: $section-margin * 0.5;
+        margin-top: $section-margin * 0.25;
         margin-bottom: $section-margin * 0.5;
+        padding-bottom: $section-margin * 0.5;
         //margin: calc($section-margin * 0.5) calc($grid-gutter-width/2);
+        overflow-x: hidden;
 
         @include media-breakpoint-up(lg) {
           margin-top: $section-margin;
           margin-bottom: 0;
+          padding-bottom: 0;
+          overflow: visible;
           //margin: $section-margin 0;
         }
         .carousel-next, .carousel-prev {
@@ -442,7 +446,14 @@
           @include media-breakpoint-up(lg) {
             top: calc(50% - 2.5rem);
           }
-
+          svg {
+            height: 75px;
+            width: 75px;
+            @include media-breakpoint-up(md) {
+              height: 113px;
+              width: 113px;
+            }
+          }
           &:hover {
             svg {
               g {
@@ -455,13 +466,16 @@
           }
         }
         .carousel-prev {
-          left: 0;
+          left: -15px;
           @include media-breakpoint-up(lg) {
             left: -20%;
           }
         }
         .carousel-next {
-          right: 0;
+          right: -15px;
+          @include media-breakpoint-up(lg) {
+            right: 0;
+          }
         }
       }
 

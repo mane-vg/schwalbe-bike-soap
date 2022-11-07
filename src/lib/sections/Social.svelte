@@ -12,14 +12,14 @@
     </div>
     <div class="row">
         <picture class="background">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 750w,
+            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 750w,
+            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
                         src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
             <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
-                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 750w,
+                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
                      src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
                      src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
         </picture>
@@ -113,10 +113,11 @@
 
       .social-slider {
         grid-column: 1/13;
-        background-color: $darkgrey;
+
         border-radius: 4px;
 
         @include media-breakpoint-up(lg) {
+          background-color: $darkgrey;
           grid-column: 4/8;
         }
         @include media-breakpoint-up(xl) {
@@ -134,21 +135,25 @@
 
             }
             a {
-              color: white;
+              color: $darkgrey;
               text-decoration: none;
               font-family: $font-family-base;
               font-size: $font-size-base;
               padding: 20px 0;
+              @include media-breakpoint-up(lg) {
+                color: white;
+              }
             }
           }
         }
       }
 
       .social-container {
-        padding: $section-margin 0;
+        padding: $section-margin/2 0;
         align-items: center;
 
         hr {
+          display: none;
           align-self: center;
           grid-column: 5/12;
           width: calc(100% - $grid-gutter-width);
@@ -156,6 +161,7 @@
           border-width: 1px;
 
           @include media-breakpoint-up(lg) {
+            display: block;
             grid-column: 2/4;
           }
           @include media-breakpoint-up(xl) {
@@ -165,9 +171,11 @@
 
         .instagram-link {
           &.account {
+            display: none;
             grid-column: 2/5;
 
             @include media-breakpoint-up(lg) {
+              display: block;
               grid-column: 1;
             }
             @include media-breakpoint-up(xl) {

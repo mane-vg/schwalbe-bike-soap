@@ -212,7 +212,7 @@
               height: calc(100vh - 130px);
               @include display-grid;
               grid-template-columns: 1fr;
-              grid-template-rows: repeat(2, calc((100vh - 130px) / 2));
+              grid-template-rows: calc(50vh - 130px) calc(50vh);//repeat(2, calc((100vh - 130px) / 2));
 
               overflow: hidden;
 

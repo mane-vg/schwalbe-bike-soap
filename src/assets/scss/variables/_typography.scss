@@ -64,8 +64,9 @@ h2, .h2 {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: $section-margin * 0.35;
-
+  line-height: 1;
   @include media-breakpoint-up(lg) {
+    line-height: unset;
     font-size: $font-size-base * 2.4;
     margin-bottom: $section-margin * 0.7;
   }
@@ -77,8 +78,9 @@ h3, .h3 {
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-
+  line-height: 1;
   @include media-breakpoint-up(lg) {
+    line-height: unset;
     font-size: $font-size-base * 1.75;
   }
 }
@@ -92,7 +94,10 @@ h4, .h4 {
 
 p {
   //font-family: $font-family-base;
-  font-size: $font-size-base;
+  font-size: $font-size-base * 0.8;
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base;
+  }
 }
 
 .highlighted {

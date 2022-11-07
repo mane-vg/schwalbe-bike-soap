@@ -350,11 +350,12 @@
           z-index: 3;
           transition: opacity 0.5s;
           pointer-events: none;
-
+          display: none;
           @include media-breakpoint-up(md) {
             transform: translateY(-50%);
           }
           @include media-breakpoint-up(lg) {
+            display: block;
             position: relative;
             top: unset;
             transform: unset;

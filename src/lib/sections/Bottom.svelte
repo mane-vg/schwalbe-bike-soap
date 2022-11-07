@@ -80,11 +80,12 @@
         right: 0;
         top: 0;
         object-position: bottom;
+        overflow: hidden;
 
         z-index: -1;
 
         img {
-          height: 100%;
+          height: 125%;
           object-fit: cover;
           @include media-breakpoint-up(lg) {
             height: unset;
@@ -98,7 +99,7 @@
       }
 
       .gras-container {
-        padding: $section-margin*2 0;
+        padding: $section-margin*2 0 $section-margin*1.5 0;
 
         .text-wrapper {
           grid-column: 1/13;
@@ -116,6 +117,7 @@
           }
           h3 {
             text-align: left;
+            margin-top: 0;
           }
         }
 
@@ -159,7 +161,10 @@
         align-items: center;
         justify-content: center;
 
-        padding: $section-margin*1.5 0;
+        padding: $section-margin*0.5 0;
+        @include media-breakpoint-up(lg) {
+          padding: $section-margin*1.5 0;
+        }
       }
     }
 </style>
