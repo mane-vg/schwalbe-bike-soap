@@ -36,19 +36,19 @@
 <section class="bottom">
     <div class="row">
         <picture class="background">
-            <source srcset="src/assets/images/bottom/grass-small.avif 750w,
-                            src/assets/images/bottom/grass-medium.avif 1200w,
-                            src/assets/images/bottom/grass-large.avif 1920w" type="image/avif">
-            <source srcset="src/assets/images/bottom/grass-small.webp 750w,
-                            src/assets/images/bottom/grass-medium.webp 1200w,
-                            src/assets/images/bottom/grass-large.webp 1920w" type="image/webp">
-            <img src="src/assets/images/bottom/grass-large.jpg"
-                 srcset="src/assets/images/bottom/grass-small.jpg 750w,
-                         src/assets/images/bottom/grass-medium.jpg 1200w,
-                         src/assets/images/bottom/grass-large.jpg 1920w" alt="Grünes Gras">
+            <source srcset="@publish.domain/images/bottom/grass-small.avif 750w,
+                            @publish.domain/images/bottom/grass-medium.avif 1200w,
+                            @publish.domain/images/bottom/grass-large.avif 1920w" type="image/avif">
+            <source srcset="@publish.domain/images/bottom/grass-small.webp 750w,
+                            @publish.domain/images/bottom/grass-medium.webp 1200w,
+                            @publish.domain/images/bottom/grass-large.webp 1920w" type="image/webp">
+            <img src="@publish.domain/images/bottom/grass-large.jpg"
+                 srcset="@publish.domain/images/bottom/grass-small.jpg 750w,
+                         @publish.domain/images/bottom/grass-medium.jpg 1200w,
+                         @publish.domain/images/bottom/grass-large.jpg 1920w" alt="Grünes Gras">
         </picture>
         <div class="container gras-container" use:activeInViewport>
-            <img class="logo" src="src/assets/images/bottom/schwalbe-bike-care.svg" alt="Schwalbe Bike Care Logo">
+            <img class="logo" src="@publish.domain/images/bottom/schwalbe-bike-care.svg" alt="Schwalbe Bike Care Logo">
             <div class="text-wrapper">
                 <h3>GO GREEN. RIDE CLEAN.</h3>
                 <p>Unsere Bike Care Produkte sorgen nicht nur für strahlende Bikes sondern auch für eine saubere Natur,

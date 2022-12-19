@@ -11,41 +11,41 @@
 
 <section class="hero">
     <picture class="background">
-        <source srcset="src/assets/images/hero/hero_background_small.avif 1170w,
-                        src/assets/images/hero/hero_background_medium.avif 1000w,
-                        src/assets/images/hero/hero_background_large.avif 1920w" type="image/avif">
-        <source srcset="src/assets/images/hero/hero_background_small.webp 1170w,
-                        src/assets/images/hero/hero_background_medium.webp 1000w,
-                        src/assets/images/hero/hero_background_large.webp 1920w" type="image/webp">
-        <img src="src/assets/images/hero/hero_background_large.jpg"
-             srcset="src/assets/images/hero/hero_background_small.jpg 1170w,
-                     src/assets/images/hero/hero_background_medium.jpg 1000w,
-                     src/assets/images/hero/hero_background_large.jpg 1920w" alt="Papiertextur mit Streifen">
+        <source srcset="@publish.domain/images/hero/hero_background_small.avif 1170w,
+                        @publish.domain/images/hero/hero_background_medium.avif 1000w,
+                        @publish.domain/images/hero/hero_background_large.avif 1920w" type="image/avif">
+        <source srcset="@publish.domain/images/hero/hero_background_small.webp 1170w,
+                        @publish.domain/images/hero/hero_background_medium.webp 1000w,
+                        @publish.domain/images/hero/hero_background_large.webp 1920w" type="image/webp">
+        <img src="@publish.domain/images/hero/hero_background_large.jpg"
+             srcset="@publish.domain/images/hero/hero_background_small.jpg 1170w,
+                     @publish.domain/images/hero/hero_background_medium.jpg 1000w,
+                     @publish.domain/images/hero/hero_background_large.jpg 1920w" alt="Papiertextur mit Streifen">
     </picture>
     <picture class="motive">
-        <source srcset="src/assets/images/hero/hero_motive-small.avif 1170w,
-                        src/assets/images/hero/hero_motive-medium.avif 1200w,
-                        src/assets/images/hero/hero_motive.avif 1600w" type="image/avif">
-        <source srcset="src/assets/images/hero/hero_motive-small.webp 1170w,
-                        src/assets/images/hero/hero_motive-medium.webp 1200w,
-                        src/assets/images/hero/hero_motive.webp 1600w" type="image/webp">
-        <img src="./src/assets/images/hero/hero_motive.jpg"
-             srcset="src/assets/images/hero/hero_motive-small.jpg 1170w,
-                     src/assets/images/hero/hero_motive-medium.jpg 1200w,
-                     src/assets/images/hero/hero_motive.jpg 1920w" alt="Idillische Landschaft">
+        <source srcset="@publish.domain/images/hero/hero_motive-small.avif 1170w,
+                        @publish.domain/images/hero/hero_motive-medium.avif 1200w,
+                        @publish.domain/images/hero/hero_motive.avif 1600w" type="image/avif">
+        <source srcset="@publish.domain/images/hero/hero_motive-small.webp 1170w,
+                        @publish.domain/images/hero/hero_motive-medium.webp 1200w,
+                        @publish.domain/images/hero/hero_motive.webp 1600w" type="image/webp">
+        <img src="./@publish.domain/images/hero/hero_motive.jpg"
+             srcset="@publish.domain/images/hero/hero_motive-small.jpg 1170w,
+                     @publish.domain/images/hero/hero_motive-medium.jpg 1200w,
+                     @publish.domain/images/hero/hero_motive.jpg 1920w" alt="Idillische Landschaft">
     </picture>
     {#if loaded}
         <picture transition:fly={{delay: 500, duration: 1500, y: 750, opacity: 1}} class="bikesoap">
-            <source srcset="src/assets/images/hero/bikesoapset-auf-baumstamm-small.avif 1170w,
-                         src/assets/images/hero/bikesoapset-auf-baumstamm-medium.avif 1200w,
-                         src/assets/images/hero/bikesoapset-auf-baumstamm-large.avif 1920w" type="image/avif">
-            <source srcset="src/assets/images/hero/bikesoapset-auf-baumstamm-small.webp 1170w,
-                         src/assets/images/hero/bikesoapset-auf-baumstamm-medium.webp 1200w,
-                         src/assets/images/hero/bikesoapset-auf-baumstamm-large.webp 1920w" type="image/webp">
-            <img src="../../assets/images/hero/bikesoapset-auf-baumstamm-large.png"
-                 srcset="src/assets/images/hero/bikesoapset-auf-baumstamm-small.png 1170w,
-                         src/assets/images/hero/bikesoapset-auf-baumstamm-medium.png 1200w,
-                         src/assets/images/hero/bikesoapset-auf-baumstamm-large.png 1920w" alt="Schwalbe Bike Soap Starterset auf Baumstamm">
+            <source srcset="@publish.domain/images/hero/bikesoapset-auf-baumstamm-small.avif 1170w,
+                         @publish.domain/images/hero/bikesoapset-auf-baumstamm-medium.avif 1200w,
+                         @publish.domain/images/hero/bikesoapset-auf-baumstamm-large.avif 1920w" type="image/avif">
+            <source srcset="@publish.domain/images/hero/bikesoapset-auf-baumstamm-small.webp 1170w,
+                         @publish.domain/images/hero/bikesoapset-auf-baumstamm-medium.webp 1200w,
+                         @publish.domain/images/hero/bikesoapset-auf-baumstamm-large.webp 1920w" type="image/webp">
+            <img src="@publish.domain/images/hero/bikesoapset-auf-baumstamm-large.png"
+                 srcset="@publish.domain/images/hero/bikesoapset-auf-baumstamm-small.png 1170w,
+                         @publish.domain/images/hero/bikesoapset-auf-baumstamm-medium.png 1200w,
+                         @publish.domain/images/hero/bikesoapset-auf-baumstamm-large.png 1920w" alt="Schwalbe Bike Soap Starterset auf Baumstamm">
         </picture>
     {/if}
     <div class="text-container">

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Rock Salt';
+    src: url('fonts/RockSalt/RockSalt-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TT Bluescreens';
+    src:  url('fonts/TTBluescreens/TTBluescreens-Medium.woff') format('woff'),
+    url('fonts/TTBluescreens/TTBluescreens-Medium.ttf') format('truetype'),
+    url('fonts/TTBluescreens/TTBluescreens-Medium.svg') format('svg');
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('fonts/Titillium/TitilliumWeb-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('fonts/Titillium/TitilliumWeb-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('fonts/Titillium/TitilliumWeb-Bold.ttf');
+    font-weight: 700;
+}

@@ -12,29 +12,29 @@
     </div>
     <div class="row">
         <picture class="background">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
-            <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
-                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
-                     src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
-                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
+            <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
+            <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
+            <img src="@publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg"
+                 srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
+                     @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
+                     @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
         </picture>
         <div class="container social-container">
-            <a class="instagram-link account" href="https://instagram.com/" target="_blank"><img src="src/assets/images/social/icon-instagram.svg" alt="Icon Instagram"></a>
+            <a class="instagram-link account" href="https://instagram.com/" target="_blank"><img src="@publish.domain/images/social/icon-instagram.svg" alt="Icon Instagram"></a>
             <hr/>
             <div class="social-slider">
                 <Carousel particlesToShow={1} particlesToScroll={1} arrows={false} autoplay={true} pauseOnFocus={true} dots={false} swiping={false}>
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-1-large.avif" type="image/avif">
-                                <source srcset="src/assets/images/social/bikesoap-instagram-1-large.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-1.large.jpg"
-                                     srcset="src/assets/images/social/bikesoap-instagram-1-large.jpg" alt="Schwalbe Bike Soap in Aktion">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-1-large.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-1-large.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap-instagram-1.large.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap-instagram-1-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
                         </div>
@@ -42,9 +42,9 @@
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-2-large.avif" type="image/avif">
-                                <source srcset="src/assets/images/social/bikesoap-instagram-2-large.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-2-large.jpg" alt="Schwalbe Bike Soap in Aktion">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-2-large.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-2-large.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap-instagram-2-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
                         </div>
@@ -52,10 +52,10 @@
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-3-large.avif" type="image/avif">
-                                <source srcset="src/assets/images/social/bikesoap-instagram-3-large.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-3-large.jpg"
-                                     srcset="src/assets/images/social/bikesoap-instagram-3-large.jpg" alt="Schwalbe Bike Soap in Aktion">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-3-large.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-3-large.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap-instagram-3-large.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap-instagram-3-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
                         </div>
@@ -63,10 +63,10 @@
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="src/assets/images/social/bikesoap-instagram-4-large.avif" type="image/avif">
-                                <source srcset="src/assets/images/social/bikesoap-instagram-4-large.webp" type="image/webp">
-                                <img src="src/assets/images/social/bikesoap-instagram-4-large.jpg"
-                                     srcset="src/assets/images/social/bikesoap-instagram-4-large.jpg" alt="Schwalbe Bike Soap in Aktion">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-4-large.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap-instagram-4-large.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap-instagram-4-large.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap-instagram-4-large.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
                         </div>
@@ -149,7 +149,7 @@
       }
 
       .social-container {
-        padding: $section-margin/2 0;
+        padding: calc($section-margin / 2) 0;
         align-items: center;
 
         hr {
