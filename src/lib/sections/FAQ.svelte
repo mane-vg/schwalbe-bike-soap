@@ -210,7 +210,7 @@
 </section>
 
 <style lang="scss">
-  @import "src/assets/scss/_import.scss";
+  @import "src/assets/scss/import.scss";
 
   section.faq {
     .accordion {
@@ -272,16 +272,6 @@
       margin-top: $section-margin * 0.35;
       @include media-breakpoint-up(lg) {
         margin-top: $section-margin * 0.7;
-      }
-
-      .btn-primary-outline {
-        color: $primary;
-        background: transparent;
-        border: 2px solid $primary;
-        &:hover {
-          color: white;
-          background: $primary;
-        }
       }
     }
   }
