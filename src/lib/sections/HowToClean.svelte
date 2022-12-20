@@ -79,16 +79,16 @@
 
 <section class="how-to-clean">
     <picture class="background">
-        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
-        <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
-                        src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
-        <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
-             srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
-                     src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
-                     src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
+        <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
+        <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
+                        @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.webp 1920w" type="image/webp">
+        <img src="@publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg"
+             srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
+                     @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
+                     @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
     </picture>
     <div class="row">
         <div class="container">
@@ -98,18 +98,18 @@
             <div class="span-12">
                 <div class="video-wrapper" use:initIframeEmbed>
                     <picture class="thumbnail">
-                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.avif 1170w,
-                                        src/assets/images/howtoclean/bike-soap-thumb-large.avif 1200w,
-                                        src/assets/images/howtoclean/bike-soap-thumb-large.avif 1600w" type="image/avif">
-                        <source srcset="src/assets/images/howtoclean/bike-soap-thumb-large.webp 1170w,
-                                        src/assets/images/howtoclean/bike-soap-thumb-large.webp 1200w,
-                                        src/assets/images/howtoclean/bike-soap-thumb-large.webp 1600w" type="image/webp">
-                        <img class="thumbnail" src="src/assets/images/howtoclean/bike-soap-thumb-large.jpg"
-                             srcset="src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1170w,
-                                     src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1200w,
-                                     src/assets/images/howtoclean/bike-soap-thumb-large.jpg 1600w" alt="Frau wäscht Fahrrad">
+                        <source srcset="@publish.domain/images/howtoclean/bike-soap-thumb-large.avif 1170w,
+                                        @publish.domain/images/howtoclean/bike-soap-thumb-large.avif 1200w,
+                                        @publish.domain/images/howtoclean/bike-soap-thumb-large.avif 1600w" type="image/avif">
+                        <source srcset="@publish.domain/images/howtoclean/bike-soap-thumb-large.webp 1170w,
+                                        @publish.domain/images/howtoclean/bike-soap-thumb-large.webp 1200w,
+                                        @publish.domain/images/howtoclean/bike-soap-thumb-large.webp 1600w" type="image/webp">
+                        <img class="thumbnail" src="@publish.domain/images/howtoclean/bike-soap-thumb-large.jpg"
+                             srcset="@publish.domain/images/howtoclean/bike-soap-thumb-large.jpg 1170w,
+                                     @publish.domain/images/howtoclean/bike-soap-thumb-large.jpg 1200w,
+                                     @publish.domain/images/howtoclean/bike-soap-thumb-large.jpg 1600w" alt="Frau wäscht Fahrrad">
                     </picture>
-                    <img class="play-button" src="src/assets/images/howtoclean/play-button.svg" alt="Playbutton">
+                    <img class="play-button" src="@publish.domain/images/howtoclean/play-button.svg" alt="Playbutton">
                 </div>
             </div>
         </div>
@@ -134,16 +134,16 @@
                     <div class="slider-stage" use:initHowToSlider>
                         <div class="slide active">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-grober-schmutz-small.avif 250w,
-                                                        src/assets/images/howtoclean/icon-grober-schmutz-medium.avif 400w,
-                                                        src/assets/images/howtoclean/icon-grober-schmutz-large.avif 526w" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-grober-schmutz-small.webp 250w,
-                                                        src/assets/images/howtoclean/icon-grober-schmutz-medium.webp 400w,
-                                                        src/assets/images/howtoclean/icon-grober-schmutz-large.webp 526w" type="image/webp">
-                                        <img src="../../assets/images/howtoclean/icon-grober-schmutz-large.png"
-                                             srcset="src/assets/images/howtoclean/icon-grober-schmutz-small.png 250w,
-                                                     src/assets/images/howtoclean/icon-grober-schmutz-medium.png 400w,
-                                                     src/assets/images/howtoclean/icon-grober-schmutz-large.png 526w" alt="Groben Schmutz mit Wasser entfernen">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-grober-schmutz-small.avif 250w,
+                                                        @publish.domain/images/howtoclean/icon-grober-schmutz-medium.avif 400w,
+                                                        @publish.domain/images/howtoclean/icon-grober-schmutz-large.avif 526w" type="image/avif">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-grober-schmutz-small.webp 250w,
+                                                        @publish.domain/images/howtoclean/icon-grober-schmutz-medium.webp 400w,
+                                                        @publish.domain/images/howtoclean/icon-grober-schmutz-large.webp 526w" type="image/webp">
+                                        <img src="@publish.domain/images/howtoclean/icon-grober-schmutz-large.png"
+                                             srcset="@publish.domain/images/howtoclean/icon-grober-schmutz-small.png 250w,
+                                                     @publish.domain/images/howtoclean/icon-grober-schmutz-medium.png 400w,
+                                                     @publish.domain/images/howtoclean/icon-grober-schmutz-large.png 526w" alt="Groben Schmutz mit Wasser entfernen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">1 &ndash;&nbsp;</span>
@@ -153,16 +153,16 @@
                                 </div>
                         <div class="slide next">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-seife-nass-small.avif 250w,
-                                                        src/assets/images/howtoclean/icon-seife-nass-medium.avif 400w,
-                                                        src/assets/images/howtoclean/icon-seife-nass-large.avif 526w" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-seife-nass-small.webp 250w,
-                                                        src/assets/images/howtoclean/icon-seife-nass-medium.webp 400w,
-                                                        src/assets/images/howtoclean/icon-seife-nass-large.webp 526w" type="image/webp">
-                                        <img src="src/assets/images/howtoclean/icon-seife-nass-large.png"
-                                             srcset="src/assets/images/howtoclean/icon-seife-nass-small.png 250w,
-                                                     src/assets/images/howtoclean/icon-seife-nass-medium.png 400w,
-                                                     src/assets/images/howtoclean/icon-seife-nass-large.png 526w" alt="Seife mit Bürste aufschäumen">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-seife-nass-small.avif 250w,
+                                                        @publish.domain/images/howtoclean/icon-seife-nass-medium.avif 400w,
+                                                        @publish.domain/images/howtoclean/icon-seife-nass-large.avif 526w" type="image/avif">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-seife-nass-small.webp 250w,
+                                                        @publish.domain/images/howtoclean/icon-seife-nass-medium.webp 400w,
+                                                        @publish.domain/images/howtoclean/icon-seife-nass-large.webp 526w" type="image/webp">
+                                        <img src="@publish.domain/images/howtoclean/icon-seife-nass-large.png"
+                                             srcset="@publish.domain/images/howtoclean/icon-seife-nass-small.png 250w,
+                                                     @publish.domain/images/howtoclean/icon-seife-nass-medium.png 400w,
+                                                     @publish.domain/images/howtoclean/icon-seife-nass-large.png 526w" alt="Seife mit Bürste aufschäumen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">2 &ndash;&nbsp;</span>
@@ -172,16 +172,16 @@
                                 </div>
                         <div class="slide next">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-buerste-einseifen-small.avif 250w,
-                                                        src/assets/images/howtoclean/icon-buerste-einseifen-medium.avif 400w,
-                                                        src/assets/images/howtoclean/icon-buerste-einseifen-large.avif 526w" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-buerste-einseifen-small.webp 250w,
-                                                        src/assets/images/howtoclean/icon-buerste-einseifen-medium.webp 400w,
-                                                        src/assets/images/howtoclean/icon-buerste-einseifen-large.webp 526w" type="image/webp">
-                                        <img src="src/assets/images/howtoclean/icon-buerste-einseifen-large.png"
-                                             srcset="src/assets/images/howtoclean/icon-buerste-einseifen-small.png 250w,
-                                                     src/assets/images/howtoclean/icon-buerste-einseifen-medium.png 400w,
-                                                     src/assets/images/howtoclean/icon-buerste-einseifen-large.png 526w" alt="Fahrrad mit Bürste und Seife reinigen">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-buerste-einseifen-small.avif 250w,
+                                                        @publish.domain/images/howtoclean/icon-buerste-einseifen-medium.avif 400w,
+                                                        @publish.domain/images/howtoclean/icon-buerste-einseifen-large.avif 526w" type="image/avif">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-buerste-einseifen-small.webp 250w,
+                                                        @publish.domain/images/howtoclean/icon-buerste-einseifen-medium.webp 400w,
+                                                        @publish.domain/images/howtoclean/icon-buerste-einseifen-large.webp 526w" type="image/webp">
+                                        <img src="@publish.domain/images/howtoclean/icon-buerste-einseifen-large.png"
+                                             srcset="@publish.domain/images/howtoclean/icon-buerste-einseifen-small.png 250w,
+                                                     @publish.domain/images/howtoclean/icon-buerste-einseifen-medium.png 400w,
+                                                     @publish.domain/images/howtoclean/icon-buerste-einseifen-large.png 526w" alt="Fahrrad mit Bürste und Seife reinigen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">3 &ndash;&nbsp;</span>
@@ -191,16 +191,16 @@
                                 </div>
                         <div class="slide next">
                                     <picture>
-                                        <source srcset="src/assets/images/howtoclean/icon-abspuelen-small.avif 250w,
-                                                        src/assets/images/howtoclean/icon-abspuelen-medium.avif 400w,
-                                                        src/assets/images/howtoclean/icon-abspuelen-large.avif 526w" type="image/avif">
-                                        <source srcset="src/assets/images/howtoclean/icon-abspuelen-small.webp 250w,
-                                                        src/assets/images/howtoclean/icon-abspuelen-medium.webp 400w,
-                                                        src/assets/images/howtoclean/icon-abspuelen-large.webp 526w" type="image/webp">
-                                        <img src="src/assets/images/howtoclean/icon-abspuelen-large.png"
-                                             srcset="src/assets/images/howtoclean/icon-abspuelen-small.png 250w,
-                                                     src/assets/images/howtoclean/icon-abspuelen-medium.png 400w,
-                                                     src/assets/images/howtoclean/icon-abspuelen-large.png 526w" alt="Seife abwaschen und in Blechdose verstauen">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-abspuelen-small.avif 250w,
+                                                        @publish.domain/images/howtoclean/icon-abspuelen-medium.avif 400w,
+                                                        @publish.domain/images/howtoclean/icon-abspuelen-large.avif 526w" type="image/avif">
+                                        <source srcset="@publish.domain/images/howtoclean/icon-abspuelen-small.webp 250w,
+                                                        @publish.domain/images/howtoclean/icon-abspuelen-medium.webp 400w,
+                                                        @publish.domain/images/howtoclean/icon-abspuelen-large.webp 526w" type="image/webp">
+                                        <img src="@publish.domain/images/howtoclean/icon-abspuelen-large.png"
+                                             srcset="@publish.domain/images/howtoclean/icon-abspuelen-small.png 250w,
+                                                     @publish.domain/images/howtoclean/icon-abspuelen-medium.png 400w,
+                                                     @publish.domain/images/howtoclean/icon-abspuelen-large.png 526w" alt="Seife abwaschen und in Blechdose verstauen">
                                     </picture>
                                     <div class="text-container">
                                         <span class="highlighted count">4 &ndash;&nbsp;</span>

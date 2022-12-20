@@ -19,12 +19,12 @@
 <section class="bikewash">
     <div class="row">
         <video class="background desktop" use:initBackgroundVideo muted playsinline loop preload="metadata">
-            <source src="src/assets/images/bikewash/bikesoap-stopmotion-landscape.webm" type="video/webm">
-            <source src="src/assets/images/bikewash/bikesoap-stopmotion-landscape.mp4" type="video/mp4">
+            <source src="@publish.domain/images/bikewash/bikesoap-stopmotion-landscape.webm" type="video/webm">
+            <source src="@publish.domain/images/bikewash/bikesoap-stopmotion-landscape.mp4" type="video/mp4">
         </video>
         <video class="background mobile" use:initBackgroundVideo muted playsinline loop preload="metadata">
-            <source src="src/assets/images/bikewash/bikesoap-stopmotion-portrait.webm" type="video/webm">
-            <source src="../../assets/images/bikewash/bikesoap-stopmotion-portrait.mp4" type="video/mp4">
+            <source src="@publish.domain/images/bikewash/bikesoap-stopmotion-portrait.webm" type="video/webm">
+            <source src="@publish.domain/images/bikewash/bikesoap-stopmotion-portrait.mp4" type="video/mp4">
         </video>
         <div class="container">
             <div class="span-12">

@@ -91,78 +91,78 @@
                 <div class="feature-wrapper" use:initFeatureSlider>
                     <div class="image-container">
                         <picture class="background">
-                            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-square-small.avif 500w,
-                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-medium.avif 1000w,
-                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.avif 1500w" type="image/avif">
-                            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.webp 500w,
-                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.webp 1000w,
-                                            src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.webp 1500w" type="image/webp">
-                            <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.jpg"
-                                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-square-small.jpg 500w,
-                                         src/assets/images/backgrounds/old-brown-paper-texture-background-square-medium.jpg 1000w,
-                                         src/assets/images/backgrounds/old-brown-paper-texture-background-square-large.jpg 1500w" alt="Hintergrund braunes Papier">
+                            <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-square-small.avif 500w,
+                                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-square-medium.avif 1000w,
+                                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-square-large.avif 1500w" type="image/avif">
+                            <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-square-large.webp 500w,
+                                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-square-large.webp 1000w,
+                                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-square-large.webp 1500w" type="image/webp">
+                            <img src="@publish.domain/images/backgrounds/old-brown-paper-texture-background-square-large.jpg"
+                                 srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-square-small.jpg 500w,
+                                         @publish.domain/images/backgrounds/old-brown-paper-texture-background-square-medium.jpg 1000w,
+                                         @publish.domain/images/backgrounds/old-brown-paper-texture-background-square-large.jpg 1500w" alt="Hintergrund braunes Papier">
                         </picture>
                         <div class="slide active">
                             <div class="slide-content">
                                 <picture>
-                                    <source srcset="src/assets/images/features/bike-soap-9-small.avif,
-                                                    src/assets/images/features/bike-soap-9-medium.avif,
-                                                    src/assets/images/features/bike-soap-9-large.avif" type="image/avif">
-                                    <source srcset="src/assets/images/features/bike-soap-9-small.webp,
-                                                    src/assets/images/features/bike-soap-9-medium.webp,
-                                                    src/assets/images/features/bike-soap-9-large.webp" type="image/webp">
-                                    <img src="src/assets/images/features/bike-soap-9-large.jpg"
-                                         srcset="src/assets/images/features/bike-soap-9-small.jpg,
-                                                 src/assets/images/features/bike-soap-9-medium.jpg,
-                                                 src/assets/images/features/bike-soap-9-large.jpg" alt="Schwalbe Bike Soap Frau mit Bürste">
+                                    <source srcset="@publish.domain/images/features/bike-soap-9-small.avif,
+                                                    @publish.domain/images/features/bike-soap-9-medium.avif,
+                                                    @publish.domain/images/features/bike-soap-9-large.avif" type="image/avif">
+                                    <source srcset="@publish.domain/images/features/bike-soap-9-small.webp,
+                                                    @publish.domain/images/features/bike-soap-9-medium.webp,
+                                                    @publish.domain/images/features/bike-soap-9-large.webp" type="image/webp">
+                                    <img src="@publish.domain/images/features/bike-soap-9-large.jpg"
+                                         srcset="@publish.domain/images/features/bike-soap-9-small.jpg,
+                                                 @publish.domain/images/features/bike-soap-9-medium.jpg,
+                                                 @publish.domain/images/features/bike-soap-9-large.jpg" alt="Schwalbe Bike Soap Frau mit Bürste">
                                 </picture>
                             </div>
                         </div>
                         <div class="slide next">
                             <div class="slide-content">
                                 <picture>
-                                    <source srcset="src/assets/images/features/bike-soap-12-small.avif,
-                                                    src/assets/images/features/bike-soap-12-medium.avif,
-                                                    src/assets/images/features/bike-soap-12-large.avif" type="image/avif">
-                                    <source srcset="src/assets/images/features/bike-soap-12-small.webp,
-                                                    src/assets/images/features/bike-soap-12-medium.webp,
-                                                    src/assets/images/features/bike-soap-12-large.webp" type="image/webp">
-                                    <img src="src/assets/images/features/bike-soap-12-large.jpg"
-                                         srcset="src/assets/images/features/bike-soap-12-small.jpg,
-                                                 src/assets/images/features/bike-soap-12-medium.jpg,
-                                                 src/assets/images/features/bike-soap-12-large.jpg" alt="Schwalbe Bike Soap Bürste am Fahrrad">
+                                    <source srcset="@publish.domain/images/features/bike-soap-12-small.avif,
+                                                    @publish.domain/images/features/bike-soap-12-medium.avif,
+                                                    @publish.domain/images/features/bike-soap-12-large.avif" type="image/avif">
+                                    <source srcset="@publish.domain/images/features/bike-soap-12-small.webp,
+                                                    @publish.domain/images/features/bike-soap-12-medium.webp,
+                                                    @publish.domain/images/features/bike-soap-12-large.webp" type="image/webp">
+                                    <img src="@publish.domain/images/features/bike-soap-12-large.jpg"
+                                         srcset="@publish.domain/images/features/bike-soap-12-small.jpg,
+                                                 @publish.domain/images/features/bike-soap-12-medium.jpg,
+                                                 @publish.domain/images/features/bike-soap-12-large.jpg" alt="Schwalbe Bike Soap Bürste am Fahrrad">
                                 </picture>
                             </div>
                         </div>
                         <div class="slide next">
                             <div class="slide-content">
                                 <picture>
-                                    <source srcset="src/assets/images/features/bike-soap-13-small.avif,
-                                                    src/assets/images/features/bike-soap-13-medium.avif,
-                                                    src/assets/images/features/bike-soap-13-large.avif" type="image/avif">
-                                    <source srcset="src/assets/images/features/bike-soap-13-small.webp,
-                                                    src/assets/images/features/bike-soap-13-medium.webp,
-                                                    src/assets/images/features/bike-soap-13-large.webp" type="image/webp">
-                                    <img src="src/assets/images/features/bike-soap-13-large.jpg"
-                                         srcset="src/assets/images/features/bike-soap-13-small.jpg,
-                                                 src/assets/images/features/bike-soap-13-medium.jpg,
-                                                 src/assets/images/features/bike-soap-13-large.jpg" alt="Schwalbe Bike Soap Fahrrad abspülen">
+                                    <source srcset="@publish.domain/images/features/bike-soap-13-small.avif,
+                                                    @publish.domain/images/features/bike-soap-13-medium.avif,
+                                                    @publish.domain/images/features/bike-soap-13-large.avif" type="image/avif">
+                                    <source srcset="@publish.domain/images/features/bike-soap-13-small.webp,
+                                                    @publish.domain/images/features/bike-soap-13-medium.webp,
+                                                    @publish.domain/images/features/bike-soap-13-large.webp" type="image/webp">
+                                    <img src="@publish.domain/images/features/bike-soap-13-large.jpg"
+                                         srcset="@publish.domain/images/features/bike-soap-13-small.jpg,
+                                                 @publish.domain/images/features/bike-soap-13-medium.jpg,
+                                                 @publish.domain/images/features/bike-soap-13-large.jpg" alt="Schwalbe Bike Soap Fahrrad abspülen">
                                 </picture>
                             </div>
                         </div>
                     </div>
                     <div class="text-container">
                         <picture class="background">
-                            <source srcset="src/assets/images/features/feature-background-small.avif 500w,
-                                            src/assets/images/features/feature-background-medium.avif 1000w,
-                                            src/assets/images/features/feature-background-large.avif 1500w" type="image/avif">
-                            <source srcset="src/assets/images/features/feature-background-small.webp 500w,
-                                            src/assets/images/features/feature-background-medium.webp 1000w,
-                                            src/assets/images/features/feature-background-large.webp 1500w" type="image/webp">
-                            <img src="src/assets/images/features/feature-background-large.jpg"
-                                 srcet="src/assets/images/features/feature-background-small.jpg 500w,
-                                        src/assets/images/features/feature-background-medium.jpg 1000w,
-                                        src/assets/images/features/feature-background-large.jpg 1500w" alt="Braunes Papier Hintergrund mit Streifen">
+                            <source srcset="@publish.domain/images/features/feature-background-small.avif 500w,
+                                            @publish.domain/images/features/feature-background-medium.avif 1000w,
+                                            @publish.domain/images/features/feature-background-large.avif 1500w" type="image/avif">
+                            <source srcset="@publish.domain/images/features/feature-background-small.webp 500w,
+                                            @publish.domain/images/features/feature-background-medium.webp 1000w,
+                                            @publish.domain/images/features/feature-background-large.webp 1500w" type="image/webp">
+                            <img src="@publish.domain/images/features/feature-background-large.jpg"
+                                 srcet="@publish.domain/images/features/feature-background-small.jpg 500w,
+                                        @publish.domain/images/features/feature-background-medium.jpg 1000w,
+                                        @publish.domain/images/features/feature-background-large.jpg 1500w" alt="Braunes Papier Hintergrund mit Streifen">
                         </picture>
                         <hr class="top"/>
                         <hr class="bottom"/>

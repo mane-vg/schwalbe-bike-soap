@@ -60,46 +60,46 @@
             <div class="col-left">
                 <div class="image-wrapper">
                     <picture use:initParallax={{multiplier: 1.5, maxOffset: 50}}>
-                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter-small.avif 200w,
-                                        src/assets/images/why/Unbound-Schwalbe-Peter-medium.avif 350w,
-                                        src/assets/images/why/Unbound-Schwalbe-Peter-large.avif 493w" type="image/avif">
-                        <source srcset="src/assets/images/why/Unbound-Schwalbe-Peter-small.webp 200w,
-                                        src/assets/images/why/Unbound-Schwalbe-Peter-medium.webp 350w,
-                                        src/assets/images/why/Unbound-Schwalbe-Peter-large.webp 493w" type="image/webp">
-                        <img src="src/assets/images/why/Unbound-Schwalbe-Peter-large.jpg"
-                             srcset="src/assets/images/why/Unbound-Schwalbe-Peter-small.jpg 200w,
-                                     src/assets/images/why/Unbound-Schwalbe-Peter-medium.jpg 350w,
-                                     src/assets/images/why/Unbound-Schwalbe-Peter-large.jpg 493w" alt="Schwalbe Peter Krischio">
+                        <source srcset="@publish.domain/images/why/Unbound-Schwalbe-Peter-small.avif 200w,
+                                        @publish.domain/images/why/Unbound-Schwalbe-Peter-medium.avif 350w,
+                                        @publish.domain/images/why/Unbound-Schwalbe-Peter-large.avif 493w" type="image/avif">
+                        <source srcset="@publish.domain/images/why/Unbound-Schwalbe-Peter-small.webp 200w,
+                                        @publish.domain/images/why/Unbound-Schwalbe-Peter-medium.webp 350w,
+                                        @publish.domain/images/why/Unbound-Schwalbe-Peter-large.webp 493w" type="image/webp">
+                        <img src="@publish.domain/images/why/Unbound-Schwalbe-Peter-large.jpg"
+                             srcset="@publish.domain/images/why/Unbound-Schwalbe-Peter-small.jpg 200w,
+                                     @publish.domain/images/why/Unbound-Schwalbe-Peter-medium.jpg 350w,
+                                     @publish.domain/images/why/Unbound-Schwalbe-Peter-large.jpg 493w" alt="Schwalbe Peter Krischio">
                     </picture>
                     <picture use:initParallax={{multiplier: 1, maxOffset: 50}}>
-                        <source srcset="src/assets/images/why/streifen-small.avif 200w,
-                                        src/assets/images/why/streifen-medium.avif 350w,
-                                        src/assets/images/why/streifen-large.avif 500w" type="image/avif">
-                        <source srcset="src/assets/images/why/streifen-small.webp 200w,
-                                        src/assets/images/why/streifen-medium.webp 350w,
-                                        src/assets/images/why/streifen-large.webp 500w" type="image/webp">
-                        <img src="../../assets/images/why/streifen-large.png"
-                             srcset="src/assets/images/why/streifen-small.png 200w,
-                                     src/assets/images/why/streifen-medium.png 350w,
-                                     src/assets/images/why/streifen-large.png 500w" alt="Streifenmuster">
+                        <source srcset="@publish.domain/images/why/streifen-small.avif 200w,
+                                        @publish.domain/images/why/streifen-medium.avif 350w,
+                                        @publish.domain/images/why/streifen-large.avif 500w" type="image/avif">
+                        <source srcset="@publish.domain/images/why/streifen-small.webp 200w,
+                                        @publish.domain/images/why/streifen-medium.webp 350w,
+                                        @publish.domain/images/why/streifen-large.webp 500w" type="image/webp">
+                        <img src="@publish.domain/images/why/streifen-large.png"
+                             srcset="@publish.domain/images/why/streifen-small.png 200w,
+                                     @publish.domain/images/why/streifen-medium.png 350w,
+                                     @publish.domain/images/why/streifen-large.png 500w" alt="Streifenmuster">
                     </picture>
                     <picture use:initParallax={{multiplier: 1.75, maxOffset: 0}}>
-                        <source srcset="src/assets/images/why/bike-soap-5-small.avif 200w,
-                                        src/assets/images/why/bike-soap-5-medium.avif 350w,
-                                        src/assets/images/why/bike-soap-5-large.avif 500w" type="image/avif">
-                        <source srcset="src/assets/images/why/bike-soap-5-small.webp 200w,
-                                        src/assets/images/why/bike-soap-5-medium.webp 350w,
-                                        src/assets/images/why/bike-soap-5-large.webp 500w" type="image/webp">
-                        <img src="src/assets/images/why/bike-soap-5-large.jpg"
-                             srcset="src/assets/images/why/bike-soap-5-small.jpg 200w,
-                                     src/assets/images/why/bike-soap-5-medium.jpg 350w,
-                                     src/assets/images/why/bike-soap-5-large.jpg 500w" alt="Schwalbe Bike Soap">
+                        <source srcset="@publish.domain/images/why/bike-soap-5-small.avif 200w,
+                                        @publish.domain/images/why/bike-soap-5-medium.avif 350w,
+                                        @publish.domain/images/why/bike-soap-5-large.avif 500w" type="image/avif">
+                        <source srcset="@publish.domain/images/why/bike-soap-5-small.webp 200w,
+                                        @publish.domain/images/why/bike-soap-5-medium.webp 350w,
+                                        @publish.domain/images/why/bike-soap-5-large.webp 500w" type="image/webp">
+                        <img src="@publish.domain/images/why/bike-soap-5-large.jpg"
+                             srcset="@publish.domain/images/why/bike-soap-5-small.jpg 200w,
+                                     @publish.domain/images/why/bike-soap-5-medium.jpg 350w,
+                                     @publish.domain/images/why/bike-soap-5-large.jpg 500w" alt="Schwalbe Bike Soap">
                     </picture>
                 </div>
             </div>
             <div class="col-right">
                 <div class="quote-slider">
-                    <img class="quote-open" src="src/assets/images/why/icon-quote-open.svg" alt="Quote open">
+                    <img class="quote-open" src="@publish.domain/images/why/icon-quote-open.svg" alt="Quote open">
                     <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={5000}
                               pauseOnFocus={true} dots={true} swiping={false} duration={500} let:currentPageIndex let:pagesCount let:showPage>
                         <div class="slide">
@@ -135,7 +135,7 @@
                             {/each}
                         </div>
                     </Carousel>
-                    <img class="quote-close" src="src/assets/images/why/icon-quote-close.svg" alt="Quote close">
+                    <img class="quote-close" src="@publish.domain/images/why/icon-quote-close.svg" alt="Quote close">
                 </div>
             </div>
         </div>

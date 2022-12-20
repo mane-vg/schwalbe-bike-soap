@@ -57,31 +57,31 @@
 <section class="starterset">
     <div class="row">
         <picture class="background">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
-                            src/assets/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
-                            src/assets/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
-            <source srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
-                            src/assets/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
-                            src/assets/images/backgrounds/old-brown-paper-texture-background-large.webp" type="image/webp">
-            <img src="src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg"
-                 srcset="src/assets/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
-                         src/assets/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
-                         src/assets/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
+            <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.avif 1170w,
+                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.avif 1200w,
+                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.avif 1920w" type="image/avif">
+            <source srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.webp 1170w,
+                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.webp 1200w,
+                            @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.webp" type="image/webp">
+            <img src="@publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg"
+                 srcset="@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.jpg 1170w,
+                         @publish.domain/images/backgrounds/old-brown-paper-texture-background-medium.jpg 1200w,
+                         @publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg 1920w" alt="Papiertextur">
         </picture>
         <div class="container" use:initParallax>
-            <img class="icon-parallax" src="src/assets/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg" type="img/svg" alt="Schwalbe Bike Soap: Jetzt erhältlich">
+            <img class="icon-parallax" src="@publish.domain/images/starterset/schwalbe-icon-jetzt-erhaeltlich.svg" type="img/svg" alt="Schwalbe Bike Soap: Jetzt erhältlich">
             <div class="span-12">
                 <picture class="" use:initZoom>
-                    <source srcset="src/assets/images/starterset/bike-soap-8-small.avif 1170w,
-                                    src/assets/images/starterset/bike-soap-8-medium.avif 1200w,
-                                    src/assets/images/starterset/bike-soap-8-large.avif 1920w" type="image/avif">
-                    <source srcset="src/assets/images/starterset/bike-soap-8-small.webp 1170w,
-                                    src/assets/images/starterset/bike-soap-8-medium.webp 1200w,
-                                    src/assets/images/starterset/bike-soap-8-large.webp 1920w" type="image/webp">
-                    <img src="src/assets/images/starterset/bike-soap-8-large.jpg"
-                         srcset="src/assets/images/starterset/bike-soap-8-small.jpg 1170w,
-                                 src/assets/images/starterset/bike-soap-8-medium.jpg 1200w,
-                                 src/assets/images/starterset/bike-soap-8-large.jpg 1920w" alt="Schwalbe BikeSoap im Einsatz">
+                    <source srcset="@publish.domain/images/starterset/bike-soap-8-small.avif 1170w,
+                                    @publish.domain/images/starterset/bike-soap-8-medium.avif 1200w,
+                                    @publish.domain/images/starterset/bike-soap-8-large.avif 1920w" type="image/avif">
+                    <source srcset="@publish.domain/images/starterset/bike-soap-8-small.webp 1170w,
+                                    @publish.domain/images/starterset/bike-soap-8-medium.webp 1200w,
+                                    @publish.domain/images/starterset/bike-soap-8-large.webp 1920w" type="image/webp">
+                    <img src="@publish.domain/images/starterset/bike-soap-8-large.jpg"
+                         srcset="@publish.domain/images/starterset/bike-soap-8-small.jpg 1170w,
+                                 @publish.domain/images/starterset/bike-soap-8-medium.jpg 1200w,
+                                 @publish.domain/images/starterset/bike-soap-8-large.jpg 1920w" alt="Schwalbe BikeSoap im Einsatz">
                 </picture>
             </div>
             <div class="text-container">

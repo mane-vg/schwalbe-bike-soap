@@ -28,5 +28,5 @@
     <Bottom />
 </div>
 
-<style lang="scss">
+<style lang="scss" >
 </style>

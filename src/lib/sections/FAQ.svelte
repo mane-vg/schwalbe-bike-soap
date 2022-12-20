@@ -201,7 +201,7 @@
             <div class="span-10 button-holder">
                 <p class="center-text">
                     {#if !accordionMore}
-                        <a transition:fade class="btn btn-primary-outline" on:click={() => accordionMore = true}>Mehr anzeigen</a>
+                        <button transition:fade class="btn btn-primary-outline" on:click={() => accordionMore = true}>Mehr anzeigen</button>
                     {/if}
                 </p>
             </div>
@@ -222,7 +222,7 @@
           font-family: $font-family-base;
           font-size: $font-size-base * 1;
           font-weight: 600;
-          background-image: url(src/assets/images/faq/chevron-down.svg);
+          background-image: url(@publish.domain/images/faq/chevron-down.svg);
           background-repeat: no-repeat;
           background-position: center right;
 
@@ -251,7 +251,7 @@
         }
         &.open {
           .accordion-header {
-            background-image: url(src/assets/images/faq/chevron-up.svg);
+            background-image: url(@publish.domain/images/faq/chevron-up.svg);
           }
           .accordion-content {
 
@@ -272,9 +272,6 @@
       margin-top: $section-margin * 0.35;
       @include media-breakpoint-up(lg) {
         margin-top: $section-margin * 0.7;
-      }
-      a {
-        cursor: pointer;
       }
     }
   }
