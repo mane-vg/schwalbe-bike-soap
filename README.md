@@ -5,7 +5,7 @@ Einbindung:
 ```
 <link href="https://bikesoap.3.vgserver.de/fonts.css" rel="stylesheet" type="text/css" />
 <schwalbe-bike-soap></schwalbe-bike-soap>
-<script src="https://bikesoap.3.vgserver.de/schwalbebikesoap_.umd.js" />
+<script src="https://bikesoap.3.vgserver.de/schwalbebikesoap_.umd.js"></script>
 <style>
     .cms-section.cms-section-default, .cms-block.cms-block-text {
         overflow: unset;
