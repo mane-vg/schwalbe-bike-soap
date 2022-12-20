@@ -56,7 +56,7 @@
         max-width: 100vw;
         object-fit: cover;
 
-        z-index: -1;
+        //z-index: -1;
 
         &.mobile {
           display: block;

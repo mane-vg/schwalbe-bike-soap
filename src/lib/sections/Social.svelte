@@ -91,7 +91,7 @@
         bottom: 0;
         right: 0;
 
-        z-index: -1;
+        //z-index: -1;
 
         img {
           width: 100%;
@@ -151,6 +151,7 @@
       .social-container {
         padding: $section-margin/2 0;
         align-items: center;
+        z-index: 1;
 
         hr {
           display: none;

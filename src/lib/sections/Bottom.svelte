@@ -82,7 +82,7 @@
         object-position: bottom;
         overflow: hidden;
 
-        z-index: -1;
+        //z-index: -1;
 
         img {
           height: 125%;
@@ -100,6 +100,7 @@
 
       .gras-container {
         padding: $section-margin*2 0 $section-margin*1.5 0;
+        z-index: 1;
 
         .text-wrapper {
           grid-column: 1/13;
