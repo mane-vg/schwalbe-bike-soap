@@ -12,7 +12,10 @@ Einbindung:
         padding-left: 0;
         padding-right: 0;
     }
-
+    
+    .cms-section {
+        overflow: unset;
+    }
     .cms-block-container-row {
         margin: 0 !important;
     }
