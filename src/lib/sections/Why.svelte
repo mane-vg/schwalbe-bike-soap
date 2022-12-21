@@ -176,6 +176,7 @@
       }
       .col-right {
         grid-column: 1/13;
+        width: 100%;
         order: 3;
         @include media-breakpoint-up(lg) {
           grid-column: 7/13;

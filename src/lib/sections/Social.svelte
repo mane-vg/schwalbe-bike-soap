@@ -113,7 +113,7 @@
 
       .social-slider {
         grid-column: 1/13;
-
+        width: 100%;
         border-radius: 4px;
 
         @include media-breakpoint-up(lg) {
