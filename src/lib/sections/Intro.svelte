@@ -26,7 +26,7 @@
                 <h1 class="highlighted">Natural Bike Soap</h1>
                 <p class="lead">Mehr als nur Bikes waschen.</p>
                 <p>Hervorragende Reinigungswirkung, lange Nutzungsdauer und ausschließlich natürliche Inhaltsstoffe:
-                    Die neue „Natural Bike Soap“ von Schwalbe ist ein Produkt, dass Umweltverträglichkeit mit der
+                    Die neue „Natural Bike Soap“ von Schwalbe ist ein Produkt, das Umweltverträglichkeit mit der
                     besten Reinigungskraft vereint.</p>
             </div>
         </div>
