@@ -23,6 +23,9 @@ Einbindung:
     .col-12, .cms-block-container {
         padding: 0 !important;
     }
+    .col-12 > .cms-element-text {
+        margin-top: 0;
+    }
 </style>`
 ```
 
