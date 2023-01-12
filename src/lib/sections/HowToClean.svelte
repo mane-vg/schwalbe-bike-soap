@@ -1,17 +1,21 @@
 <script>
+    import { swipe } from 'svelte-gestures';
 
     export let prev = true;
     export let next = true;
     export let ytID = 'ZabXvqVOEIo';
 
+    export let howToSlider;
+
     function initHowToSlider(element) {
+        howToSlider = element;
         let scrollHeight;
         if(window.innerWidth < 900) {
-            scrollHeight = element.querySelector('.slide.active').offsetHeight + element.querySelector('.slide.active .text-container').offsetHeight;
+            scrollHeight = element.querySelector('.slide.active').offsetHeight;
         } else {
             scrollHeight = element.querySelector('.slide.active').offsetHeight;
         }
-        // let scrollHeight = element.querySelector('.slide.active').offsetHeight + element.querySelector('.slide.active .text-container').offsetHeight;
+
         element.style.height = scrollHeight + 'px';
         element.querySelectorAll('.slide').forEach((slide) => {
             slide.style.height = scrollHeight + 'px';
@@ -27,43 +31,51 @@
         if(!element.querySelector('.slide.active').nextElementSibling) {
             element.parentNode.querySelector('.carousel-prev').style.opacity = 0;
         }
+    }
 
-        function nextElement() {
-            let currentElement = element.querySelector('.slide.active');
-
-            let nextElement = currentElement.nextElementSibling;
-
-            if(nextElement) {
-                currentElement.classList.remove('active');
-                currentElement.classList.add('prev');
-                nextElement.classList.remove('next');
-                nextElement.classList.add('active');
-            }
-            if(nextElement.previousElementSibling) {
-                element.parentNode.querySelector('.carousel-prev').style.opacity = 1;
-            }
-            if(!nextElement.nextElementSibling) {
-                element.parentNode.querySelector('.carousel-next').style.opacity = 0;
-            }
+    function sliderSwipeHandler(event) {
+        if(event.detail.direction === 'left') {
+            nextElement();
+        } else if(event.detail.direction === 'right') {
+            prevElement();
         }
+    }
 
-        function prevElement() {
-            let currentElement = element.querySelector('.slide.active');
+    function nextElement() {
+        let currentElement = howToSlider.querySelector('.slide.active');
 
-            let prevElement = currentElement.previousElementSibling;
+        let nextElement = currentElement.nextElementSibling;
 
-            if(prevElement) {
-                currentElement.classList.remove('active');
-                currentElement.classList.add('next');
-                prevElement.classList.remove('prev');
-                prevElement.classList.add('active');
-            }
-            if(prevElement.nextElementSibling) {
-                element.parentNode.querySelector('.carousel-next').style.opacity = 1;
-            }
-            if(!prevElement.previousElementSibling) {
-                element.parentNode.querySelector('.carousel-prev').style.opacity = 0;
-            }
+        if(nextElement) {
+            currentElement.classList.remove('active');
+            currentElement.classList.add('prev');
+            nextElement.classList.remove('next');
+            nextElement.classList.add('active');
+        }
+        if(nextElement.previousElementSibling) {
+            howToSlider.parentNode.querySelector('.carousel-prev').style.opacity = 1;
+        }
+        if(!nextElement.nextElementSibling) {
+            howToSlider.parentNode.querySelector('.carousel-next').style.opacity = 0;
+        }
+    }
+
+    function prevElement() {
+        let currentElement = howToSlider.querySelector('.slide.active');
+
+        let prevElement = currentElement.previousElementSibling;
+
+        if(prevElement) {
+            currentElement.classList.remove('active');
+            currentElement.classList.add('next');
+            prevElement.classList.remove('prev');
+            prevElement.classList.add('active');
+        }
+        if(prevElement.nextElementSibling) {
+            howToSlider.parentNode.querySelector('.carousel-next').style.opacity = 1;
+        }
+        if(!prevElement.previousElementSibling) {
+            howToSlider.parentNode.querySelector('.carousel-prev').style.opacity = 0;
         }
     }
 
@@ -131,7 +143,7 @@
                             </svg>
                         </button>
                     {/if}
-                    <div class="slider-stage" use:initHowToSlider>
+                    <div class="slider-stage" use:initHowToSlider use:swipe={{timeframe: 300, minSwipeDistance: 50, touchAction: 'pan-y'}} on:swipe={sliderSwipeHandler}>
                         <div class="slide active">
                                     <picture>
                                         <source srcset="@publish.domain/images/howtoclean/icon-grober-schmutz-small.avif 250w,
@@ -146,8 +158,10 @@
                                                      @publish.domain/images/howtoclean/icon-grober-schmutz-large.png 526w" alt="Groben Schmutz mit Wasser entfernen">
                                     </picture>
                                     <div class="text-container">
-                                        <span class="highlighted count">1 &ndash;&nbsp;</span>
-                                        <span class="highlighted desc">Abspritzen</span>
+                                        <div class="headline">
+                                            <span class="highlighted count">1 &ndash;&nbsp;</span>
+                                            <span class="highlighted desc">Abspritzen</span>
+                                        </div>
                                         <p>Zuerst das Fahrrad einmal mit Wasser komplett abspritzen und dabei den groben Dreck entfernen.</p>
                                     </div>
                                 </div>
@@ -165,8 +179,10 @@
                                                      @publish.domain/images/howtoclean/icon-seife-nass-large.png 526w" alt="Seife mit Bürste aufschäumen">
                                     </picture>
                                     <div class="text-container">
-                                        <span class="highlighted count">2 &ndash;&nbsp;</span>
-                                        <span class="highlighted desc">Einseifen</span>
+                                        <div class="headline">
+                                            <span class="highlighted count">2 &ndash;&nbsp;</span>
+                                            <span class="highlighted desc">Einseifen</span>
+                                        </div>
                                         <p>Mit der feuchten Bürste oder einem Schwamm schäumt man die Seife auf. Dann reinigt man damit sein Bike und spült es anschließend wieder mit Wasser ab.</p>
                                     </div>
                                 </div>
@@ -184,8 +200,10 @@
                                                      @publish.domain/images/howtoclean/icon-buerste-einseifen-large.png 526w" alt="Fahrrad mit Bürste und Seife reinigen">
                                     </picture>
                                     <div class="text-container">
-                                        <span class="highlighted count">3 &ndash;&nbsp;</span>
-                                        <span class="highlighted desc">Reinigen</span>
+                                        <div class="headline">
+                                            <span class="highlighted count">3 &ndash;&nbsp;</span>
+                                            <span class="highlighted desc">Reinigen</span>
+                                        </div>
                                         <p>Zwei bis dreimal die Bürste wieder frisch mit der Seife einschäumen, das reicht für eine Wäsche.</p>
                                     </div>
                                 </div>
@@ -203,8 +221,10 @@
                                                      @publish.domain/images/howtoclean/icon-abspuelen-large.png 526w" alt="Seife abwaschen und in Blechdose verstauen">
                                     </picture>
                                     <div class="text-container">
-                                        <span class="highlighted count">4 &ndash;&nbsp;</span>
-                                        <span class="highlighted desc">Abspülen</span>
+                                        <div class="headline">
+                                            <span class="highlighted count">4 &ndash;&nbsp;</span>
+                                            <span class="highlighted desc">Abspülen</span>
+                                        </div>
                                         <p>Dann die Seife wieder kurz abwaschen und in der Blechdose verstauen. Zack, ist man fertig.</p>
                                     </div>
                                 </div>
@@ -231,6 +251,7 @@
     section.how-to-clean {
       position: relative;
       picture.background {
+        display: none;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -240,7 +261,8 @@
         overflow: hidden;
 
         @include media-breakpoint-up(lg) {
-          height: 75%;
+          display: block;
+          height: 50%;
         }
 
         img {
@@ -251,6 +273,7 @@
           }
         }
       }
+
       .row {
         .container {
           @include media-breakpoint-down(md) {
@@ -267,6 +290,26 @@
             @include media-breakpoint-up(lg) {
               grid-column: 3/13;
             }
+          }
+        }
+
+        &:nth-of-type(1) {
+          @include media-breakpoint-up(lg) {
+            //background-image: url(@publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg);
+            //background-size: 110% 60%;
+            //background-position: center bottom;
+            //background-repeat-y: no-repeat;
+          }
+        }
+        &:nth-of-type(2) {
+          background-image: url(@publish.domain/images/backgrounds/old-brown-paper-texture-background-small.jpg);
+          background-position: center;
+          background-size: 100%;
+          padding-top: 50px;
+
+          @include media-breakpoint-up(lg) {
+            background-image: url(@publish.domain/images/backgrounds/old-brown-paper-texture-background-large.jpg);
+            padding-top: 75px;
           }
         }
       }
@@ -310,18 +353,13 @@
 
       .slide {
         @include display-grid;
-        grid-template-rows: auto auto;
+        grid-template-rows: 250px 175px;
         grid-template-columns: 1fr;
         grid-gap: 2rem;
 
-        //@include media-breakpoint-up(md) {
-        //  grid-template-columns: 200px 1fr;
-        //  grid-template-rows: auto;
-        //  grid-gap: 5rem;
-        //}
         @include media-breakpoint-up(lg) {
           grid-template-columns: 250px 1fr;
-          grid-template-rows: auto;
+          grid-template-rows: 350px;
           grid-gap: 5rem;
         }
 
@@ -332,15 +370,17 @@
           }
           @include media-breakpoint-down(sm) {
             max-width: 100%;
-            margin: 0 $grid-gutter-width * 2;
           }
 
-          /*@include media-breakpoint-up(md) {
-            max-width: 100%;
-            margin: unset;
-          }*/
           @include media-breakpoint-up(lg) {
             grid-column: 1;
+          }
+
+          img {
+            @include media-breakpoint-down(md) {
+              height: 100%;
+              margin: 0 auto;
+            }
           }
         }
         .text-container {
@@ -369,8 +409,6 @@
             grid-column: 2;
             line-height: 1;
             text-transform: uppercase;
-
-            //transform: translate(-4rem, -1.5rem);
 
             @include media-breakpoint-up(lg) {
               font-size: $font-size-base * 7.6;
@@ -403,6 +441,7 @@
             }
           }
           p {
+            float: left;
             @include media-breakpoint-up(lg) {
               max-width: 75%;
               transform: translate(-0rem, -5rem);
@@ -417,10 +456,9 @@
 
       .slider-wrapper {
         position: relative;
-        margin-top: $section-margin * 0.25;
-        margin-bottom: $section-margin * 0.5;
-        padding-bottom: $section-margin * 0.5;
-        //margin: calc($section-margin * 0.5) calc($grid-gutter-width/2);
+        margin-top: $section-margin * 0.5;
+        //margin-bottom: $section-margin * 0.5;
+        padding-bottom: $section-margin;
         overflow-x: hidden;
 
         @include media-breakpoint-up(lg) {
@@ -428,7 +466,6 @@
           margin-bottom: 0;
           padding-bottom: 0;
           overflow: visible;
-          //margin: $section-margin 0;
         }
         .carousel-next, .carousel-prev {
           position: absolute;
@@ -481,11 +518,14 @@
 
       .slider-stage {
         position: relative;
-        padding: 0 0 50px 0;
+        //padding: 0 0 50px 0;
+        padding: 0;
+        //margin-top: -50px;
         overflow: hidden;
 
         @include media-breakpoint-up(lg) {
           padding: 100px 0;
+          margin-top: -100px;
         }
         .slide {
           position: absolute;
@@ -495,6 +535,12 @@
             mix-blend-mode: multiply;
             opacity: 0;
             transition: opacity 1s;
+
+            img {
+              //@include media-breakpoint-up(lg) {
+              //  margin-top: 50%;
+              //}
+            }
           }
           span.highlighted {
             @include media-breakpoint-down(lg) {

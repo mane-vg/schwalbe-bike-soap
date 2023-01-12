@@ -50,7 +50,7 @@
         <div class="container gras-container" use:activeInViewport>
             <img class="logo" src="@publish.domain/images/bottom/schwalbe-bike-care.svg" alt="Schwalbe Bike Care Logo">
             <div class="text-wrapper">
-                <h3>GO GREEN. RIDE CLEAN.</h3>
+                <h3>GO GREEN.<br/> RIDE CLEAN.</h3>
                 <p>Unsere Bike Care Produkte sorgen nicht nur für strahlende Bikes sondern auch für eine saubere Natur,
                     denn sie vereinen Umweltverträglichkeit und beste Reinigungskraft, wie kein anderes Produkt.</p>
             </div>
@@ -82,8 +82,6 @@
         object-position: bottom;
         overflow: hidden;
 
-        //z-index: -1;
-
         img {
           height: 125%;
           object-fit: cover;
@@ -99,7 +97,7 @@
       }
 
       .gras-container {
-        padding: $section-margin*2 0 $section-margin*1.5 0;
+        padding: $section-margin*2.5 0 $section-margin*1.5 0;
         z-index: 1;
 
         .text-wrapper {

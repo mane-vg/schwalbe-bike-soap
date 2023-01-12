@@ -27,48 +27,160 @@
             <a class="instagram-link account" href="https://instagram.com/" target="_blank"><img src="@publish.domain/images/social/icon-instagram.svg" alt="Icon Instagram"></a>
             <hr/>
             <div class="social-slider">
-                <Carousel particlesToShow={1} particlesToScroll={1} arrows={false} autoplay={true} pauseOnFocus={true} dots={false} swiping={false}>
+                <Carousel particlesToShow={1} particlesToScroll={1} arrows={false} autoplay={true} pauseOnFocus={true} dots={false} swiping={true}>
                     <div class="slide">
                         <div class="slide-content">
                             <picture>
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-1-large.avif" type="image/avif">
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-1-large.webp" type="image/webp">
-                                <img src="@publish.domain/images/social/bikesoap-instagram-1.large.jpg"
-                                     srcset="@publish.domain/images/social/bikesoap-instagram-1-large.jpg" alt="Schwalbe Bike Soap in Aktion">
-                            </picture>
-                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <picture>
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-2-large.avif" type="image/avif">
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-2-large.webp" type="image/webp">
-                                <img src="@publish.domain/images/social/bikesoap-instagram-2-large.jpg" alt="Schwalbe Bike Soap in Aktion">
-                            </picture>
-                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <picture>
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-3-large.avif" type="image/avif">
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-3-large.webp" type="image/webp">
-                                <img src="@publish.domain/images/social/bikesoap-instagram-3-large.jpg"
-                                     srcset="@publish.domain/images/social/bikesoap-instagram-3-large.jpg" alt="Schwalbe Bike Soap in Aktion">
-                            </picture>
-                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <picture>
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-4-large.avif" type="image/avif">
-                                <source srcset="@publish.domain/images/social/bikesoap-instagram-4-large.webp" type="image/webp">
-                                <img src="@publish.domain/images/social/bikesoap-instagram-4-large.jpg"
-                                     srcset="@publish.domain/images/social/bikesoap-instagram-4-large.jpg" alt="Schwalbe Bike Soap in Aktion">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange11.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange11.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_patricklange11.large.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_patricklange11.jpg" alt="Schwalbe Bike Soap in Aktion">
                             </picture>
                             <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange12.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange12.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_patricklange12.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_patricklange12.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange13.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange13.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_patricklange13.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_patricklange13.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange14.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange14.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_patricklange14.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_patricklange14.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange15.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange15.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_patricklange15.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_patricklange15.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange16.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_patricklange16.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_patricklange16.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_patricklange16.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/patricklange1/" target="_blank">@patricklange1</a>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth1.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth1.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth1.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth1.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth2.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth2.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth2.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth2.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth4.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth4.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth4.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth4.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth5.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth5.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth5.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth5.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth6.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth6.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth6.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth6.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth7.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth7.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth7.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth7.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth9.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth9.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth9.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth9.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <picture>
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth9.avif" type="image/avif">
+                                <source srcset="@publish.domain/images/social/bikesoap_insta_steffimarth9.webp" type="image/webp">
+                                <img src="@publish.domain/images/social/bikesoap_insta_steffimarth9.jpg"
+                                     srcset="@publish.domain/images/social/bikesoap_insta_steffimarth9.jpg" alt="Schwalbe Bike Soap in Aktion">
+                            </picture>
+                            <a href="https://www.instagram.com/steffimarth/" target="_blank">@steffimarth</a>
                         </div>
                     </div>
                 </Carousel>
@@ -90,8 +202,6 @@
         left: 0;
         bottom: 0;
         right: 0;
-
-        //z-index: -1;
 
         img {
           width: 100%;
@@ -115,7 +225,9 @@
         grid-column: 1/13;
         width: 100%;
         border-radius: 4px;
-
+        @include media-breakpoint-up(md) {
+          grid-column: 3/11;
+        }
         @include media-breakpoint-up(lg) {
           background-color: $darkgrey;
           grid-column: 4/8;

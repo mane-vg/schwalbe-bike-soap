@@ -1,7 +1,6 @@
 <script>
     import { onMount } from 'svelte';
     import { swipe } from 'svelte-gestures';
-    import Carousel from 'svelte-carousel';
 
     export let controlPrevActive = false;
     export let controlNextActive = true;
@@ -160,11 +159,6 @@
         <div class="container-fluid">
             <div class="span-12">
                 <h3>Das Starterset beinhaltet</h3>
-                <!--<Carousel particlesToShow={particlesToShow} particlesToScroll={1} infinite={false} swiping={false} duration={500}
-                    let:showPrevPage let:showNextPage on:pageChange={event => carouselIndex = event.detail}>-->
-                    <!--<div slot="prev" on:click={showPrevPage} class="carousel-control carousel-prev" class:active={carouselIndex > 0}>
-                        <img src="@publish.domain/images/carousel/chevron-left.svg">
-                    </div>-->
                 <div class="carousel-wrapper" use:initCarousel>
                     <div class="carousel-control carousel-prev" class:active={controlPrevActive}>
                         <img src="@publish.domain/images/carousel/chevron-left.svg" alt="Pfeil links">
@@ -261,10 +255,6 @@
                         <img src="@publish.domain/images/carousel/chevron-right.svg" alt="Pfeil rechts">
                     </div>
                 </div>
-                    <!--<div slot="next" on:click={showNextPage} class="carousel-control carousel-next" class:active={carouselIndex < carouselMaxIndex}>
-                        <img src="@publish.domain/images/carousel/chevron-right.svg">
-                    </div>-->
-<!--                </Carousel>-->
             </div>
         </div>
     </div>
@@ -276,9 +266,6 @@
     .starterset-contents {
       .sc-carousel__content-container {
         .sc-carousel__pages-window {
-          @include media-breakpoint-up(md) {
-            //padding: 0 150px;
-          }
           @include media-breakpoint-up(lg) {
             padding: 0 150px;
           }
@@ -307,12 +294,11 @@
 
       .slide {
         display: inline-block;
-        margin: 0 calc($grid-gutter-width / 2);
+        margin: 15px calc($grid-gutter-width / 2) 0;
         @include media-breakpoint-down(md) {
           width: 100%;
         }
         picture {
-          padding: 0 15px;
           img {
             width: 100%;
             object-fit: cover;
@@ -323,7 +309,7 @@
           }
         }
         .slide-text {
-          margin: 0 auto;
+          margin: 15px auto 0;
           text-align: center;
           h4 {
             margin-top: 0;

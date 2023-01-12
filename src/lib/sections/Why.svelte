@@ -2,8 +2,6 @@
     import { onMount } from 'svelte';
     import Carousel from 'svelte-carousel';
 
-    // export let maxOffset = 0;
-
     function initParallax(element, parameters) {
         let oldPosition;
         let initialOffset = parseInt(getComputedStyle(element).getPropertyValue('--translate-x'));
@@ -100,8 +98,8 @@
             <div class="col-right">
                 <div class="quote-slider">
                     <img class="quote-open" src="@publish.domain/images/why/icon-quote-open.svg" alt="Quote open">
-                    <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={5000}
-                              pauseOnFocus={true} dots={true} swiping={false} duration={500} let:currentPageIndex let:pagesCount let:showPage>
+                    <Carousel particlesToShow={1} particlesToScroll={1} infinite={true} arrows={false} autoplay={true} autoplayDuration={7500}
+                              pauseOnFocus={true} dots={true} swiping={true} duration={500} let:currentPageIndex let:pagesCount let:showPage>
                         <div class="slide">
                             <figure class="quote">
                                 <blockquote>
@@ -168,6 +166,9 @@
         grid-column: 1/13;
         min-height: 50vh;
         order: 1;
+        @include media-breakpoint-up(md) {
+          min-height: 75vh;
+        }
         @include media-breakpoint-up(lg) {
           order: 2;
           grid-column: 1/6;

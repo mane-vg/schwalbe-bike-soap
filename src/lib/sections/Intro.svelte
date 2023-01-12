@@ -9,8 +9,6 @@
             entries.forEach((entry) => {
                 if(entry.isIntersecting) {
                     fadeIn = true;
-                } else {
-                    // fadeIn = false;
                 }
             });
         };
@@ -59,7 +57,7 @@
           text-align: center;
           h1 {
             text-align: center;
-            font-size: calc($h1-large-size / 2.25);
+            font-size: calc($h1-large-size * 0.86);
             @include media-breakpoint-up(md) {
               font-size: calc($h1-large-size / 2);
             }
@@ -85,15 +83,14 @@
 
             span {
               font-family: $font-family-base;
-              font-size: 26px;
+              font-size: 1.3rem;
               text-transform: uppercase;
               font-weight: 600;
               line-height: 1;
               align-self: center;
-              //padding: calc($grid-gutter-width/2) 0;
-
 
               @include media-breakpoint-up(lg) {
+                font-size: 26px;
                 padding: 0;
                 margin: 0 1rem;
               }
@@ -104,13 +101,13 @@
               &.star {
                 margin-top: 13px;
                 line-height: 26px;
-                font-size: 46px;
+                font-size: 1.6rem;
+                @include media-breakpoint-up(lg) {
+                  font-size: 46px;
+                }
               }
             }
           }
-          //height: 100px;
-          //border-top: 3px dotted $darkgrey;
-          //border-bottom: 3px dotted $darkgrey;
         }
       }
     }

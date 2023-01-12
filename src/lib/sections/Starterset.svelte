@@ -128,17 +128,19 @@
           }
           .icon-parallax {
             position: absolute;
-            left: 10%;
-            top: 40%;
-            max-width: 85px;
+            left: 5%;
+            top: 30%;
+            max-width: 120px;
             --translate-x: -125px;
             --translate-x-max: 0;
             transform: translate(-25%, var(--translate-x));
             transition: transform 0.1s;
             z-index: 1;
-            mix-blend-mode: color-burn;
+            mix-blend-mode: multiply;
 
             @include media-breakpoint-up(md) {
+              top: 40%;
+              left: 10%;
               max-width: 120px;
               transform: translate(-15%, var(--translate-x));
             }
@@ -173,7 +175,7 @@
             }
 
             h2 {
-              font-size: 3rem;//calc($h1-large-size / 3.75);
+              font-size: 3rem;
               color: white;
 
               @include media-breakpoint-up(md) {
