@@ -4,12 +4,24 @@
     font-weight: 400;
 }
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: TT Bluescreens Medium by TypeType
+ * URL: https://www.myfonts.com/products/medium-tt-bluescreens-592279
+ * Copyright: Copyright © 2023 Monotype Imaging Inc. All rights reserved.
+ *
+ * © 2023 MyFonts Inc. */
 @font-face {
-    font-family: 'TT Bluescreens';
-    src:  url('fonts/TTBluescreens/TTBluescreens-Medium.woff') format('woff'),
-    url('fonts/TTBluescreens/TTBluescreens-Medium.ttf') format('truetype'),
-    url('fonts/TTBluescreens/TTBluescreens-Medium.svg') format('svg');
-    font-weight: 500;
+    font-family: "TTBluescreens";
+    src: url('fonts/TTBluescreens/TTBluescreens-Medium.woff2') format('woff2'), url('fonts/TTBluescreens/TTBluescreens-Medium.woff') format('woff');
 }
 
 
