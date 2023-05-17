@@ -1,6 +1,6 @@
 # Schwalbe Bikesoap Component
 
-Einbindung:
+## Einbindung:
 
 ```
 <link href="https://bikesoap.3.vgserver.de/fonts.css" rel="stylesheet" type="text/css" />
@@ -31,4 +31,5 @@ Einbindung:
 
 Der style-Tag ist nötig, um die ganze Bildschirmbreite zu bekommen.
 
+## Für production bereitmachen:
 Build domain  in der .env.production setzen...
