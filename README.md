@@ -3,9 +3,9 @@
 ## Einbindung:
 
 ```
-<link href="https://www.schwalbe.shopware.guthand.com/bikecare/fonts.css" rel="stylesheet" type="text/css" />
+<link href="https://www.schwalbe.shopware.guthand.com/bikesoap/fonts.css" rel="stylesheet" type="text/css" />
 <schwalbe-bike-soap></schwalbe-bike-soap>
-<script src="https://www.schwalbe.shopware.guthand.com/bikecare/schwalbebikesoap_.umd.js"></script>
+<script src="https://www.schwalbe.shopware.guthand.com/bikesoap/schwalbebikesoap_.umd.js"></script>
 `<style>
     .cms-page.side-spacing .cms-section-default.boxed, .cms-block.cms-block-text, .cms-block.cms-block-moorl-twig {
         overflow: unset;
